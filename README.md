@@ -1,1 +1,3 @@
-This site contains data wrangling from Code for Durham projects
+datahub-dw
+
+Data Wranglings for the Affordable Housing project
