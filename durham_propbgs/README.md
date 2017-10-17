@@ -46,11 +46,18 @@ database, and then insert aggrigate statistics, of parcel data into block-groups
 
 To extract the property sales data to a csv file run PropSalesExt.py
 
-The create a GeoJson file from the census shape file by running the following org2ogr command:
-ogr2ogr -f GeoJSON -t_srs EPSG:4326 -sql "select GEOID10 from cenbg2010 where countyfp10 = '063'" durhambgs.  geojson cenbg2010/cenbg2010.shp
-
-To convert the GeoJson file to TopoJson and merge it with the property sales data issue the following 
+To create a GeoJson (durhambgs.geojson) file from the census shape file runn the following org2ogr 
 command:
+
+ogr2ogr -f GeoJSON -t_srs EPSG:4326 -sql "select GEOID10 from cenbg2010 where countyfp10 = '063'" durhambgs.geojson cenbg2010/cenbg2010.shp
+
+To create a topojson file (durhambgs.topojson) from the GeoJson file run the following command:
+
+topojson --spherical -s 1E-10 -q 1E8 --id-property=GEOID10 -o durhambgs.topojson durhambgs.geojson
+
+To convert the GeoJson file to TopoJson and merge (durhampropbgs.topojson) it with the property sales data 
+run the following command:
+
 topojson -e propsales_100517.csv --id-property=+GEOID10 -p msp2015,tsp2015,ns2015,msp2016,tsp2016,ns2016 --spherical -s 1E-10 -q 1E8 -o durhambgs.topojson durhambgs.geojson
 
 If you want to merge the property sales data with the GeoJson file you should modify and run the
