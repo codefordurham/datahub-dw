@@ -51,7 +51,7 @@ ogr2ogr -f GeoJSON -t_srs EPSG:4326 -sql "select GEOID10 from cenbg2010 where co
 
 To convert the GeoJson file to TopoJson and merge it with the property sales data issue the following 
 command:
-topojson -e propsales_100517.csv --id-property=+GEOID10 -p mean_sale_price,tot_sale_price,num_sales,begin_date,end_date --spherical -s 1E-10 -q 1E8 -o durhambgs.topojson durhambgs.geojson
+topojson -e propsales_100517.csv --id-property=+GEOID10 -p msp2015,tsp2015,ns2015,msp2016,tsp2016,ns2016 --spherical -s 1E-10 -q 1E8 -o durhambgs.topojson durhambgs.geojson
 
 If you want to merge the property sales data with the GeoJson file you should modify and run the
 MergeCsv2GeoJson.py python snippet accordingly.
