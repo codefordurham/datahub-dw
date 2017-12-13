@@ -1,0 +1,111 @@
+SELECT 
+      AVG(parcels.sale_price) AS mean_sale_price, 
+      MEDIAN(parcels.sale_price) AS median_sale_price,
+      MIN(parcels.sale_price) AS min_sale_price,
+      MAX(parcels.sale_price) AS max_sale_price,
+      SUM(parcels.sale_price) AS total_sale_price,
+      COUNT(parcels.sale_price) AS num_sales
+FROM durhamcitylimits AS dcl 
+JOIN parcels_org_100517 AS parcels ON ST_Within(parcels.geom, dcl.geom) 
+WHERE parcels.land_use = '111' AND 
+      parcels.sale_price > 0 AND 
+      parcels.date_sold BETWEEN '20130101' AND '20141231' 
+GROUP BY status 
+ORDER BY mean_sale_price;
+
+   mean_sale_price   |  median_sale_price  | min_sale_price | max_sale_price | total_sale_price | num_sales 
+---------------------+---------------------+----------------+----------------+------------------+-----------
+ 225567.953741496599 | 202500.000000000000 |           1000 |        2700000 |       1160547122 |      5145
+(1 row)
+
+
+SELECT
+      AVG(CAST(bgs.mhi_14 AS NUMERIC)) AS mean_mhi_14,
+      MEDIAN(CAST(bgs.mhi_14 AS NUMERIC)) AS median_mhi_14,
+      MIN(CAST(bgs.mhi_14 AS NUMERIC)) AS min_mhi_14,
+      MAX(CAST(bgs.mhi_14 AS NUMERIC)) AS max_mhi_14,
+      AVG(CAST(bgs.mhi_13 AS NUMERIC)) AS mean_mhi_13,
+      MEDIAN(CAST(bgs.mhi_13 AS NUMERIC)) AS median_mhi_13,
+      MIN(CAST(bgs.mhi_13 AS NUMERIC)) AS min_mhi_13,
+      MAX(CAST(bgs.mhi_13 AS NUMERIC)) AS max_mhi_13
+FROM durhamcitylimits_ll AS dcl 
+JOIN durhamcompassbgs_ll AS bgs ON ST_Within(bgs.geom, dcl.geom) 
+GROUP BY status       
+ORDER BY mean_mhi_14;
+
+ mean_mhi_14 | median_mhi_14 | min_mhi_14 | max_mhi_14 | mean_mhi_13 | median_mhi_13 | min_mhi_13 | max_mhi_13
+-------------+---------------+------------+------------+-------------+---------------+------------+------------
+ 45135.83000 | 39128.5000000 |          0 |     153000 | 45249.49000 | 39604.5000000 |          0 |     160517
+(1 row)
+
+SELECT
+      AVG((CAST(bgs.mhi_14 AS NUMERIC)+CAST(bgs.mhi_13 AS NUMERIC))/2.0) AS mean_mhi,
+      MEDIAN((CAST(bgs.mhi_14 AS NUMERIC)+CAST(bgs.mhi_13 AS NUMERIC))/2.0) AS median_mhi
+FROM durhamcitylimits_ll AS dcl
+JOIN durhamcompassbgs_ll AS bgs ON ST_Within(bgs.geom, dcl.geom)
+GROUP BY status
+ORDER BY mean_mhi;
+
+ mean_mhi | median_mhi     
+----------+------------
+ 45192.66 | 38643.00
+
+City PIR 2013 through 2014: 5.24
+
+
+
+
+SELECT
+      AVG(parcels.sale_price) AS mean_sale_price,
+      MEDIAN(parcels.sale_price) AS median_sale_price,
+      MIN(parcels.sale_price) AS min_sale_price,
+      MAX(parcels.sale_price) AS max_sale_price,
+      SUM(parcels.sale_price) AS total_sale_price,
+      COUNT(parcels.sale_price) AS num_sales
+FROM cenbg2010 AS county 
+JOIN parcels_org_100517 AS parcels ON ST_Within(parcels.geom, county.geom)
+WHERE county.countyfp10 = '063' AND
+      parcels.land_use = '111' AND
+      parcels.sale_price > 0 AND
+      parcels.date_sold BETWEEN '20130101' AND '20141231'
+GROUP BY county.countyfp10
+ORDER BY mean_sale_price;
+
+   mean_sale_price   |  median_sale_price  | min_sale_price | max_sale_price | total_sale_price | num_sales 
+---------------------+---------------------+----------------+----------------+------------------+-----------
+ 228420.970409198512 | 201250.000000000000 |           1000 |        2700000 |       1350881619 |      5914
+(1 row)
+
+SELECT
+      AVG(CAST(bgs.mhi_14 AS NUMERIC)) AS mean_mhi_14,
+      MEDIAN(CAST(bgs.mhi_14 AS NUMERIC)) AS median_mhi_14,
+      MIN(CAST(bgs.mhi_14 AS NUMERIC)) AS min_mhi_14,
+      MAX(CAST(bgs.mhi_14 AS NUMERIC)) AS max_mhi_14,
+      AVG(CAST(bgs.mhi_13 AS NUMERIC)) AS mean_mhi_13,
+      MEDIAN(CAST(bgs.mhi_13 AS NUMERIC)) AS median_mhi_13,
+      MIN(CAST(bgs.mhi_13 AS NUMERIC)) AS min_mhi_13,
+      MAX(CAST(bgs.mhi_13 AS NUMERIC)) AS max_mhi_13
+FROM durhamcountyboundary_ll AS county 
+JOIN durhamcompassbgs_ll AS bgs ON ST_Within(bgs.geom, county.geom)
+GROUP BY county.id
+ORDER BY mean_mhi_14;
+
+ mean_mhi_14 | median_mhi_14 | min_mhi_14 | max_mhi_14 | mean_mhi_13 | median_mhi_13 | min_mhi_13 | max_mhi_13 
+-------------+---------------+------------+------------+-------------+---------------+------------+------------
+ 51776.42143 | 45892.0000000 |          0 |     153000 | 50962.04286 | 44389.0000000 |          0 |     160517
+(1 row)
+
+SELECT
+      AVG((CAST(bgs.mhi_14 AS NUMERIC)+CAST(bgs.mhi_13 AS NUMERIC))/2.0) AS mean_mhi,
+      MEDIAN((CAST(bgs.mhi_14 AS NUMERIC)+CAST(bgs.mhi_13 AS NUMERIC))/2.0) AS median_mhi
+FROM durhamcountyboundary_ll AS county
+JOIN durhamcompassbgs_ll AS bgs ON ST_Within(bgs.geom, county.geom)
+GROUP BY county.id 
+ORDER BY mean_mhi;
+
+          mean_mhi          |     median_mhi
+----------------------------+--------------------
+ 51369.23214285714285714286 | 45530.000000000000
+(1 row)
+
+County and City PIR 2013 through 2014: 4.42

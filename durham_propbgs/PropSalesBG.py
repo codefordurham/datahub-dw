@@ -13,16 +13,16 @@ def createpropsale(datadate):
         cur.execute("""CREATE TABLE %(table_name)s (gid serial,
                           geoid10 varchar(255),
                           mean_sale_price float8,
-                          tot_sale_price float8,
+                          min_sale_price float8,
+                          max_sale_price float8,
+                          median_sale_price float8,
+                          total_sale_price float8,
                           num_sales int,
                           begin_date date,
                           end_date date)""",
                           {'table_name': AsIs('propsales_'+datadate)})
         cur.execute("""ALTER TABLE %(table_name)s ADD PRIMARY KEY (gid)""",
                    {'table_name': AsIs('propsales_'+datadate)})
-
-        """for command in commands:
-            cur.execute(command)"""
 
         cur.close()
         conn.commit()
@@ -38,10 +38,33 @@ def insertpropsale(begindate,enddate,datadate):
     try:
         conn = psycopg2.connect("dbname='durham_prop' user='jmcmanus' password='bulldurham'")
         cur = conn.cursor()
+        cur.execute("""CREATE OR REPLACE FUNCTION _final_median(NUMERIC[])
+                       RETURNS NUMERIC AS
+                       $$
+                         SELECT AVG(val)
+                         FROM (
+                               SELECT val
+                               FROM unnest($1) val
+                               ORDER BY 1
+                               LIMIT  2 - MOD(array_upper($1, 1), 2)
+                               OFFSET CEIL(array_upper($1, 1) / 2.0) - 1
+                              ) sub;
+                       $$
+                       LANGUAGE 'sql' IMMUTABLE;
+                       CREATE AGGREGATE median(NUMERIC) (
+                         SFUNC=array_append,
+                         STYPE=NUMERIC[],
+                         FINALFUNC=_final_median,
+                         INITCOND='{}'
+                       );""")
+
         cur.execute("""SELECT
             bgs.geoid10 AS geoid10,
-            SUM(parcels.sale_price) / COUNT(parcels.sale_price) AS mean_sale_price,
-            SUM(parcels.sale_price) AS tot_sale_price,
+            AVG(parcels.sale_price) AS mean_sale_price,
+            MIN(parcels.sale_price) AS min_sale_price,
+            MAX(parcels.sale_price) AS max_sale_price,
+            MEDIAN(parcels.sale_price) AS median_sale_price,
+            SUM(parcels.sale_price) AS total_sale_price,
             COUNT(parcels.sale_price) AS num_sales
         FROM cenbg2010 AS bgs
         JOIN %(table_name)s AS parcels
@@ -62,10 +85,10 @@ def insertpropsale(begindate,enddate,datadate):
         cur.execute("BEGIN")
 
         for row in rows:
-            cur.execute("INSERT INTO propsales_"+datadate+" (geoid10,mean_sale_price,tot_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+begindate+"','"+enddate+"')")
+            cur.execute("INSERT INTO propsales_"+datadate+" (geoid10,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+begindate+"','"+enddate+"')")
 
         cur.execute("COMMIT")
-        cur.execute("ANALYZE propsales")
+        cur.execute("ANALYZE %(table_name)s",{'table_name': AsIs('propsales_'+datadate)})
 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -75,5 +98,6 @@ def insertpropsale(begindate,enddate,datadate):
 
 # Runs the programs.
 createpropsale("100517")
-insertpropsale('20161001','20170930','100517')
-insertpropsale('20151001','20170930','100517')
+#insertpropsale('20161001','20170930','100517')
+#insertpropsale('20151001','20160930','100517')
+insertpropsale('20130101','20141231','100517')
