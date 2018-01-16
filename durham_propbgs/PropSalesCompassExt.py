@@ -3,13 +3,13 @@ from psycopg2.extensions import AsIs
 import pandas as pd
 import numpy as np
 
-def extractpropsalecompass(begin_year):
+def extractpropsalescompass(begin_year):
     # Extracts property sale data from propsales_'mmddyy' table and save the data to a csv file.
-    #columns = ["msp"+begin_year,"tsp"+begin_year,"ns"+begin_year]
+    # columns = ["msp"+begin_year,"tsp"+begin_year,"ns"+begin_year]
     columns = ["meansp","minsp","maxsp","mediansp","totsp","nums","mhi","pir"]
     propsales = pd.DataFrame(columns=columns)
 
-    f = open('data/geoid10.csv','r')
+    f = open('geoid10.csv','r')
     geoids = f.readlines()
     f.close()
 
@@ -27,7 +27,7 @@ def extractpropsalecompass(begin_year):
                        FROM %(table_name)s
                        WHERE EXTRACT(YEAR FROM begin_date) = %(year)s
                        ORDER BY geoid10""",
-                       {'year': begin_year, 'table_name': AsIs('propsalecompass')})
+                       {'year': begin_year, 'table_name': AsIs('propsalescompass_bgs')})
 
         rows = np.array(cur.fetchall())
 
@@ -39,7 +39,6 @@ def extractpropsalecompass(begin_year):
                 propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8]]], index=[row[0]], columns=columns)
                 propsales = propsales.append(propsale)
             else:
-                #propsale = pd.DataFrame([['0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0']], index=[geoid.strip()], columns=columns)
                 propsale = pd.DataFrame([['NaN','Nan','Nan','NaN','NaN','NaN','NaN','NaN']], index=[geoid.strip()], columns=columns)
                 propsales = propsales.append(propsale)
 
@@ -51,6 +50,6 @@ def extractpropsalecompass(begin_year):
         if conn is not None:
             conn.close()
 
-f = open('propsalescompass_100517.csv','w')
-f.write(pd.concat([extractpropsalecompass('2013')], axis=1).to_csv(index_label='id'))
+f = open('propsalescompass_bgs_100517.csv','w')
+f.write(pd.concat([extractpropsalescompass('2013')], axis=1).to_csv(index_label='id'))
 f.close()

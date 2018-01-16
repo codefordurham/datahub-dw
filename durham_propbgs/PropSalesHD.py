@@ -11,7 +11,7 @@ def createpropsale(datadate):
         cur.execute("""SET STANDARD_CONFORMING_STRINGS TO ON""")
         cur.execute("""BEGIN""")
         cur.execute("""CREATE TABLE %(table_name)s (gid serial,
-                          geoid10 varchar(255),
+                          objectid varchar(255),
                           mean_sale_price float8,
                           min_sale_price float8,
                           max_sale_price float8,
@@ -20,9 +20,9 @@ def createpropsale(datadate):
                           num_sales int,
                           begin_date date,
                           end_date date)""",
-                          {'table_name': AsIs('propsales_bgs_'+datadate)})
+                          {'table_name': AsIs('propsales_hds_'+datadate)})
         cur.execute("""ALTER TABLE %(table_name)s ADD PRIMARY KEY (gid)""",
-                   {'table_name': AsIs('propsales_bgs_'+datadate)})
+                   {'table_name': AsIs('propsales_hds_'+datadate)})
 
         cur.close()
         conn.commit()
@@ -38,7 +38,8 @@ def insertpropsale(begindate,enddate,datadate):
     try:
         conn = psycopg2.connect("dbname='durham_prop' user='jmcmanus' password='bulldurham'")
         cur = conn.cursor()
-        cur.execute("""CREATE OR REPLACE FUNCTION _final_median(NUMERIC[])
+        #cur.execute(
+        """CREATE OR REPLACE FUNCTION _final_median(NUMERIC[])
                        RETURNS NUMERIC AS
                        $$
                          SELECT AVG(val)
@@ -56,25 +57,25 @@ def insertpropsale(begindate,enddate,datadate):
                          STYPE=NUMERIC[],
                          FINALFUNC=_final_median,
                          INITCOND='{}'
-                       );""")
+                       );"""
+        #)
 
         cur.execute("""SELECT
-            bgs.geoid10 AS geoid10,
+            hds.objectid AS objectid,
             AVG(parcels.sale_price) AS mean_sale_price,
             MIN(parcels.sale_price) AS min_sale_price,
             MAX(parcels.sale_price) AS max_sale_price,
             MEDIAN(parcels.sale_price) AS median_sale_price,
             SUM(parcels.sale_price) AS total_sale_price,
             COUNT(parcels.sale_price) AS num_sales
-        FROM cenbg2010 AS bgs
+        FROM neighborhoods_ft AS hds
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, bgs.geom)
+        ON ST_Within(parcels.geom, hds.geom)
         WHERE
-            bgs.countyfp10 = '063' AND
             parcels.land_use = '111' AND
             parcels.sale_price > 0 AND
             parcels.date_sold BETWEEN %(begin_date)s AND %(end_date)s
-        GROUP BY geoid10
+        GROUP BY objectid
         ORDER BY mean_sale_price""",
         {'begin_date': begindate, 'end_date': enddate, 'table_name': AsIs('parcels_org_'+datadate)})
 
@@ -85,10 +86,10 @@ def insertpropsale(begindate,enddate,datadate):
         cur.execute("BEGIN")
 
         for row in rows:
-            cur.execute("INSERT INTO propsales_bgs_"+datadate+" (geoid10,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+begindate+"','"+enddate+"')")
+            cur.execute("INSERT INTO propsales_hds_"+datadate+" (objectid,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+begindate+"','"+enddate+"')")
 
         cur.execute("COMMIT")
-        cur.execute("ANALYZE %(table_name)s",{'table_name': AsIs('propsales_bgs_'+datadate)})
+        cur.execute("ANALYZE %(table_name)s",{'table_name': AsIs('propsales_hds_'+datadate)})
 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -97,7 +98,7 @@ def insertpropsale(begindate,enddate,datadate):
             conn.close()
 
 # Runs the programs.
-createpropsale("100517")
+#createpropsale("100517")
 #insertpropsale('20161001','20170930','100517')
 #insertpropsale('20151001','20160930','100517')
 insertpropsale('20130101','20141231','100517')

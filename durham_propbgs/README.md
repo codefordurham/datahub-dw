@@ -61,7 +61,7 @@ topojson --spherical -s 1E-10 -q 1E8 --id-property=GEOID10 -o durhambgs.topojson
 To convert the GeoJson file to TopoJson and merge (durhampropbgs.topojson) it with the property sales 
 data run the following command:
 
-topojson -e propsales_100517.csv --id-property=+GEOID10 -p msp2015,tsp2015,ns2015,msp2016,tsp2016,ns2016 --spherical -s 1E-10 -q 1E8 -o durhambgs.topojson durhambgs.geojson
+topojson -e propsales_bgs_100517.csv --id-property=+GEOID10 -p msp2015,tsp2015,ns2015,msp2016,tsp2016,ns2016 --spherical -s 1E-10 -q 1E8 -o durhambgs.topojson durhambgs.geojson
 
 If you want to merge the property sales data with the GeoJson file you should modify and run the
 MergeCsv2GeoJson.py python snippet accordingly.
@@ -73,16 +73,16 @@ The Durham Neighborhood Compass is a quantitative indicators project with qualit
 
 Use the same methods described previously on how to ingest shp file data into the postgresql data base. The use the following SQL command to creat the view table:
 
-CREATE VIEW propsalecompass AS
+CREATE VIEW propsalescompass_bgs AS
     SELECT PS.geoid10, PS.mean_sale_price, PS.min_sale_price, PS.max_sale_price,
            PS.median_sale_price, PS.total_sale_price, PS.num_sales,
            CAST(DC.mhi_13 AS DECIMAL)+CAST(DC.mhi_14 AS DECIMAL)/2.0 AS mhi,
            CAST(PS.median_sale_price AS DECIMAL)/(CAST(DC.mhi_13 AS DECIMAL)+CAST(DC.mhi_14 AS DECIMAL)/2.0) AS pir,
            PS.begin_date, PS.end_date
-    FROM propsales_100517 AS PS
-    INNER JOIN durhamcompass AS DC ON (PS.geoid10=DC.geoid10);
+    FROM propsales_bgs_100517 AS PS
+    INNER JOIN durhamcompassbgs_ll AS DC ON (PS.geoid10=DC.geoid10);
 
-Assuming the propsal table in named propsales_100517 and Durham Compass table is named durhamcompass.
+Assuming the propsal table in named propsales_bgs_100517 and Durham Compass table is named durhamcompassbgs_ll.
 
 Now use the file PropSalesCompassExt.py to extract the data into a csv file. The csv files can be imported into the appropriate tables in the datahub-be database, where they can be served using the
 Django Rest Framework. To learn more about the datahub-be project go to the following GitHub repository:
