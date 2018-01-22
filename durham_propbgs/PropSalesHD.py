@@ -98,7 +98,7 @@ def insertpropsale(begindate,enddate,datadate):
             conn.close()
 
 # Runs the programs.
-#createpropsale("100517")
+createpropsale("100517")
 #insertpropsale('20161001','20170930','100517')
 #insertpropsale('20151001','20160930','100517')
 insertpropsale('20130101','20141231','100517')
