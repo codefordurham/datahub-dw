@@ -39,7 +39,7 @@ def extractpropsalescompass(begin_year):
                 propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8]]], index=[row[0]], columns=columns)
                 propsales = propsales.append(propsale)
             else:
-                propsale = pd.DataFrame([['NaN','Nan','Nan','NaN','NaN','NaN','NaN','NaN']], index=[geoid.strip()], columns=columns)
+                propsale = pd.DataFrame([['NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN']], index=[geoid.strip()], columns=columns)
                 propsales = propsales.append(propsale)
 
         return(propsales)
