@@ -9,11 +9,15 @@ def extractsingfamhouse(datadate,featuretype):
     singfamhousing = pd.DataFrame(columns=columns)
 
     if featuretype == 'bgs':
-       f = open('geoid10.csv','r')
-       featureids = f.readlines()
-       f.close()
+        if datadate == '2010':
+            fid = 'geoid10'
+        else:
+            fid = 'geoid10'
 
-       fid = 'geoid10'
+        f = open(fid+'.csv','r')
+        featureids = f.readlines()
+        f.close()
+
     elif featuretype == 'hds':
        f = open('objectid.csv','r')
        featureids = f.readlines()
@@ -67,8 +71,13 @@ def extractsingfamhouse(datadate,featuretype):
         if conn is not None:
             conn.close()
 
-f = open('singfamhouse_hds_100517.csv','w')
-f.write(pd.DataFrame(extractsingfamhouse('100517','hds')).to_csv(index_label='id'))
+#f = open('singfamhouse_hds_100517.csv','w')
+#f.write(pd.DataFrame(extractsingfamhouse('100517','hds')).to_csv(index_label='id'))
 #f = open('singfamhouse_bgs_100517.csv','w')
 #f.write(pd.DataFrame(extractsingfamhouse('100517','bgs')).to_csv(index_label='id'))
+#f = open('singfamhouse_bgs_011818.csv','w')
+#f.write(pd.DataFrame(extractsingfamhouse('011818','bgs')).to_csv(index_label='id'))
+#f.close()
+f = open('singfamhouse_bgs_2001.csv','w')
+f.write(pd.DataFrame(extractsingfamhouse('2001','bgs')).to_csv(index_label='id'))
 f.close()
