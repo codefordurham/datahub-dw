@@ -11,7 +11,7 @@ def extractpropsalescompass(begin_year):
 
     if begin_year == '1998':
         geo_id = 'geoid00'
-        tablename = 'propsalesacs_2000_bgs'
+        tablename = 'propsalesdec_2000_bgs'
     elif begin_year == '2015':
         geo_id = 'geoid10'
         tablename = 'propsalesacs_2016_bgs'
@@ -60,6 +60,9 @@ def extractpropsalescompass(begin_year):
         if conn is not None:
             conn.close()
 
-f = open('propsalesacs_2017_bgs.csv','w')
-f.write(pd.concat([extractpropsalescompass('2015')], axis=1).to_csv(index_label='id'))
+#f = open('propsalesacs_2017_bgs.csv','w')
+#f.write(pd.concat([extractpropsalescompass('2015')], axis=1).to_csv(index_label='id'))
+#f.close()
+f = open('propsalesdec_2000_bgs.csv','w')
+f.write(pd.concat([extractpropsalescompass('1998')], axis=1).to_csv(index_label='id'))
 f.close()

@@ -1,0 +1,14 @@
+psql -U jmcmanus -d datahub -a -f acsrace16.sql 
+psql -U jmcmanus -d datahub -a -f acsincome16.sql 
+psql -U jmcmanus -d datahub -a -f acsincome16.sql 
+psql -U jmcmanus -d datahub -a -f compassrace1314.sql 
+psql -U jmcmanus -d datahub -a -f decrace00.sql 
+psql -U jmcmanus -d datahub -a -f durham_ltdbacs_7016_tr.sql 
+psql -U jmcmanus -d datahub -a -f propsalescompass_100517.sql
+psql -U jmcmanus -d datahub -a -f propsalesdec_2000.sql
+psql -U jmcmanus -d datahub -a -f propsalesacs_2017.sql
+psql -U jmcmanus -d datahub -a -f singfamhouse_100517.sql
+psql -U jmcmanus -d datahub -a -f singfamhouse_011818.sql
+psql -U jmcmanus -d datahub -a -f singfamhouse_2001.sql
+psql -U jmcmanus -d datahub -a -f singfamhouse_011818.sql
+psql -U jmcmanus -d datahub -a -f singfamhouse_2001.sql
