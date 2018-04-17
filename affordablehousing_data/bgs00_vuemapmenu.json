@@ -22,7 +22,14 @@
         {label: 'Percent Pacific Islanders and Hawaiian Non-Hispanic, in 2000', value: 'ptpanl00', type: 'bgs'},
         {label: 'Percent Other Non-Hispanic, in 2000', value: 'ptothnl00', type: 'bgs'},
         {label: 'Percent 2 or More Races Non-Hispanic, in 2000', value: 'pt2mnl00', type: 'bgs'},
-        {label: 'Percent Hispanic, in 2000', value: 'ptlat00', type: 'bgs'}
+        {label: 'Percent Hispanic, in 2000', value: 'ptlat00', type: 'bgs'},
+        {label: 'Mean Value of Single Family Non-Owner Occupied Homes, in 2001', value: 'mean_sfno2001', type: 'bgs'},
+        {label: 'Total Value of Single Family Non-Owner Occupied Homes, in 2001', value: 'tot_sfno2001', type: 'bgs'},
+        {label: 'Number of Single Family Non-Owner Occupied Homes, in 2001', value: 'num_sfno2001', type: 'bgs'},
+        {label: 'Mean Value of Single Family Owner Occupied Homes, in 2001', value: 'mean_sfoo2001', type: 'bgs'},
+        {label: 'Total Value of Single Family Owner Occupied Homes, in 2001', value: 'tot_sfoo2001', type: 'bgs'},
+        {label: 'Number of Single Family Owner Occupied Homes, in 2001', value: 'num_sfoo2001', type: 'bgs'},
+        {label: 'Percent of Single Family Non-Owner Occupied Homes, in 2001', value: 'prc_sfno2001', type: 'bgs'}
 
       if (this.select.value === 'meansp9800' && this.select.type === 'bgs') {
         desc = 'Mean Sale Price, for Single Family Homes: ' + numberWithCommas(this.currentDurhambg.meansp9800)
@@ -98,4 +105,25 @@
       }
       else if (this.select.value === 'ptlat00' && this.select.type === 'bgs') {
         desc = 'Percent Hispanic: ' + numberWithCommas(this.currentDurhambg.ptlat00)
+      }
+      else if (this.select.value === 'mean_sfno2001' && this.select.type === 'bgs') {
+        desc = 'Mean Value of Single Family Non-Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.mean_sfno2001)
+      }
+      else if (this.select.value === 'tot_sfno2001' && this.select.type === 'bgs') {
+        desc = 'Total Value of Single Family Non-Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.tot_sfno2001)
+      }
+      else if (this.select.value === 'num_sfno2001' && this.select.type === 'bgs') {
+        desc = 'Number of Single Family Non-Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.num_sfno2001)
+      }
+      else if (this.select.value === 'mean_sfoo2001' && this.select.type === 'bgs') {
+        desc = 'Mean Value of Single Family Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.mean_sfoo2001)
+      }
+      else if (this.select.value === 'tot_sfoo2001' && this.select.type === 'bgs') {
+        desc = 'Total Value of Single Family Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.tot_sfoo2001)
+      }
+      else if (this.select.value === 'num_sfoo2001' && this.select.type === 'bgs') {
+        desc = 'Number of Single Family Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.num_sfoo2001)
+      }
+      else if (this.select.value === 'prc_sfno2001' && this.select.type === 'bgs') {
+        desc = 'Percent of Single Family Non-Owner Occupied Homes: ' + numberWithCommas(this.currentDurhambg.prc_sfno2001)
       }
