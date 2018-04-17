@@ -1,0 +1,27 @@
+var|desc
+meansp|Mean Sale Price, for Single Family Homes
+minsp|Minimum Sale Price, for Single Family Homes
+maxsp|Maximum Sale Price, for Single Family Homes
+mediansp|Median Sale Price, for Single Family Homes
+totsp|Total Sale Price, for Single Family Homes
+nums|Number of Homes Sold, for Single Family Homes
+mhi|Median Houshold Income
+pir|Price Income Ratio
+mgr_phi|Median Gross Rent as a Percentage Of Household Income In The Past 12 Months
+mmoc_phi|Median Selected Monthly Owner Costs as a Percentage Of Household Income In The Past 12 Months
+mean_sfno|Mean Value of Single Family Non-Owner Occupied Homes
+tot_sfno|Total Value of Single Family Non-Owner Occupied Homes
+num_sfno|Number of Single Family Non-Owner Occupied Homes
+mean_sfoo|Mean Value of Single Family Owner Occupied Homes
+tot_sfoo|Total Value of Single Family Owner Occupied Homes
+num_sfoo|Number of Single Family Owner Occupied Homes
+prc_sfno|Percent of Single Family Non-Owner Occupied Homes
+pop|Total Population
+ptwhnl|Percent White Non-Hispanic
+ptblknl|Percent Black Non-Hispanic
+ptnanl|Percent Native Non-Hispanic
+ptasnl|Percent Asian Non-Hispanic
+ptpanl|Percent Pacific Islanders and Hawaiian Non-Hispanic
+ptothnl|Percent Other Non-Hispanic
+pt2mnl|Percent 2 or More Races Non-Hispanic
+ptlat|Percent Hispanic

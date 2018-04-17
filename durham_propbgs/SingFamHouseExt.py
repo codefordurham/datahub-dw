@@ -5,25 +5,20 @@ import numpy as np
 
 def extractsingfamhouse(datadate,featuretype):
     # Extracts property sale data from singfamhouse_'mmddyy' table and save the data to a csv file.
-    columns = ['mean_sfno','tot_sfno','num_sfno','mean_sfoo','tot_sfoo','num_sfoo','prc_sfno']
+    columns = ['mean_sfno'+datadate,'tot_sfno'+datadate,'num_sfno'+datadate,'mean_sfoo'+datadate,'tot_sfoo'+datadate,'num_sfoo'+datadate,'prc_sfno'+datadate]
+
     singfamhousing = pd.DataFrame(columns=columns)
 
     if featuretype == 'bgs':
-        if datadate == '2010':
-            fid = 'geoid10'
-        else:
-            fid = 'geoid10'
-
+        fid = 'geoid10'
         f = open(fid+'.csv','r')
         featureids = f.readlines()
         f.close()
-
     elif featuretype == 'hds':
-       f = open('objectid.csv','r')
+       fid = 'objectid'
+       f = open(fid+'.csv','r')
        featureids = f.readlines()
        f.close()
-
-       fid = 'objectid'
     else:
         sys.exit('Incorrect feature type')
 
@@ -73,11 +68,13 @@ def extractsingfamhouse(datadate,featuretype):
 
 #f = open('singfamhouse_hds_100517.csv','w')
 #f.write(pd.DataFrame(extractsingfamhouse('100517','hds')).to_csv(index_label='id'))
-#f = open('singfamhouse_bgs_100517.csv','w')
-#f.write(pd.DataFrame(extractsingfamhouse('100517','bgs')).to_csv(index_label='id'))
-#f = open('singfamhouse_bgs_011818.csv','w')
-#f.write(pd.DataFrame(extractsingfamhouse('011818','bgs')).to_csv(index_label='id'))
 #f.close()
+f = open('singfamhouse_bgs_100517.csv','w')
+f.write(pd.DataFrame(extractsingfamhouse('100517','bgs')).to_csv(index_label='id'))
+f.close()
+f = open('singfamhouse_bgs_011818.csv','w')
+f.write(pd.DataFrame(extractsingfamhouse('011818','bgs')).to_csv(index_label='id'))
+f.close()
 f = open('singfamhouse_bgs_2001.csv','w')
 f.write(pd.DataFrame(extractsingfamhouse('2001','bgs')).to_csv(index_label='id'))
 f.close()

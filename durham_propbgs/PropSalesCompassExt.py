@@ -6,7 +6,7 @@ import numpy as np
 def extractpropsalescompass(begin_year):
     # Extracts property sale data from propsales_'mmddyy' table and save the data to a csv file.
     # columns = ["msp"+begin_year,"tsp"+begin_year,"ns"+begin_year]
-    columns = ["meansp","minsp","maxsp","mediansp","totsp","nums","mhi","pir"]
+    columns = ["meansp1314","minsp1314","maxsp1314","mediansp1314","totsp1314","nums1314","mhi1314","pir1314"]
     propsales = pd.DataFrame(columns=columns)
 
     f = open('geoid10.csv','r')

@@ -3,20 +3,20 @@ from psycopg2.extensions import AsIs
 import pandas as pd
 import numpy as np
 
-def extractpropsalescompass(begin_year):
+def extractpropsales(begin_year):
     # Extracts property sale data from propsales_'mmddyy' table and save the data to a csv file.
-    # columns = ["msp"+begin_year,"tsp"+begin_year,"ns"+begin_year]
-    columns = ["meansp","minsp","maxsp","mediansp","totsp","nums","mhi","pir","mgr_phi","mmoc_phi"]
-    propsales = pd.DataFrame(columns=columns)
-
     if begin_year == '1998':
+        columns = ["meansp9800","minsp9800","maxsp9800","mediansp9800","totsp9800","nums9800","mhi99","pir9800","mgr_phi99","mmoc_phi99"]
         geo_id = 'geoid00'
         tablename = 'propsalesdec_2000_bgs'
     elif begin_year == '2015':
+        columns = ["meansp1517","minsp1517","maxsp1517","mediansp1517","totsp1517","nums1517","mhi16","pir1517","mgr_phi16","mmoc_phi16"]
         geo_id = 'geoid10'
         tablename = 'propsalesacs_2016_bgs'
     else:
         sys.exit('Incorrect Begin Year!')
+
+    propsales = pd.DataFrame(columns=columns)
 
     f = open(geo_id+'.csv','r')
     geoids = f.readlines()
@@ -60,9 +60,9 @@ def extractpropsalescompass(begin_year):
         if conn is not None:
             conn.close()
 
-#f = open('propsalesacs_2017_bgs.csv','w')
-#f.write(pd.concat([extractpropsalescompass('2015')], axis=1).to_csv(index_label='id'))
-#f.close()
+f = open('propsalesacs_2017_bgs.csv','w')
+f.write(pd.concat([extractpropsales('2015')], axis=1).to_csv(index_label='id'))
+f.close()
 f = open('propsalesdec_2000_bgs.csv','w')
-f.write(pd.concat([extractpropsalescompass('1998')], axis=1).to_csv(index_label='id'))
+f.write(pd.concat([extractpropsales('1998')], axis=1).to_csv(index_label='id'))
 f.close()
