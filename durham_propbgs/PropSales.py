@@ -8,7 +8,12 @@ def createpropsale(datadate,featuretype):
         geoid_yr = 'geoid10'
     elif len(datadate) == 4:
         if datadate == '2001':
-            geoid_yr = 'geoid00'
+            if featuretype == 'trts00':
+                geoid_yr = 'geoid00'
+            elif featuretype == 'trts':
+                geoid_yr = 'geoid10'
+            else:
+                sys.exit('Incorrect featureid')
         elif datadate == '2010':
             geoid_yr = 'geoid10'
         else:
@@ -67,13 +72,18 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
             if featuretype == 'bgs':
                 census_table = 'cenbg2000ft'
                 feature_id = 'bgroup'
-            elif featuretype == 'trts':
+                geoid_yr = 'geoid00'
+            elif featuretype == 'trts00':
                 census_table = 'centr2000ft'
                 feature_id = 'centract'
+                geoid_yr = 'geoid00'
+            elif featuretype == 'trts':
+                census_table = 'centr2010ft'
+                feature_id = 'geoid10'
+                geoid_yr = 'geoid10'
             else:
                 sys.exit('Incorrect feature type')
 
-            geoid_yr = 'geoid00'
             parcel_table = 'durhamparcelhistory'+datadate
             sale_price = 'amslam'
             land_use = 'akrdc1'
@@ -87,12 +97,11 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
                 sys.exit('Incorrect feature type')
 
             geoid_yr = 'geoid10'
-            census_table = 'cenbg2010ft'
-            parcel_table = ''+datadate
-            feature_id = ''
-            sale_price = ''
-            land_use = ''
-            date_sold = ''
+            parcel_table = 'durham'+datadate+'_jan_01_parcels'
+            feature_id = 'geoid10'
+            sale_price = 'amslam'
+            land_use = 'akrdc1'
+            date_sold = 'amdtsl'
         else:
             sys.exit('Need to check datadate')
     else:
@@ -168,10 +177,14 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
 #insertpropsale("20151001","20171231","011818","bgs")
 #insertpropsale("20130101","20141231","100517","bgs")
 #insertpropsale("19980101","20001231","2001","bgs")
+#createpropsale("2001","trts00")
+#insertpropsale("19980101","20001231","2001","trts00")
 #createpropsale("2001","trts")
 #insertpropsale("19980101","20001231","2001","trts")
-createpropsale("100517","trts")
-insertpropsale("20130101","20141231","100517","trts")
-createpropsale("011818","trts")
-insertpropsale("20151001","20171231","011818","trts")
+createpropsale("2010","trts")
+insertpropsale("20081001","20091231","2010","trts")
+#createpropsale("100517","trts")
+#insertpropsale("20130101","20141231","100517","trts")
+#createpropsale("011818","trts")
+#insertpropsale("20151001","20171231","011818","trts")
 
