@@ -109,7 +109,7 @@ def insertsingfamhouse(datadate,bgyr):
 
         #Query for single family non-owner occupied housing data
         cur.execute("""SELECT
-            bgs.%(geoid)s AS geoid,
+            bgs.%(featureid)s AS geoid,
             SUM(parcels.%(totval)s) / COUNT(parcels.%(totval)s) AS mean_sfno_val,
             SUM(parcels.%(totval)s) AS tot_sfno_val,
             COUNT(parcels.%(totval)s) AS num_sfno
@@ -118,12 +118,12 @@ def insertsingfamhouse(datadate,bgyr):
         ON ST_Within(parcels.geom, bgs.geom)
         WHERE
             parcels.%(landuse)s = '111' AND
-            bgs.%(geoid)s LIKE '37063%%' AND
+            bgs.%(featureid)s LIKE '37063%%' AND
             ARRAY_LENGTH(ARRAY_INTERSECT(STRING_TO_ARRAY(%(siteaddr)s,' '),
                                          STRING_TO_ARRAY(%(ownaddr)s,' ')),1) <= 1
-        GROUP BY bgs.%(geoid)s
+        GROUP BY bgs.%(featureid)s
         ORDER BY mean_sfno_val""",
-        {'table_name': AsIs(table_prefix+datadate), 'landuse': AsIs(land_use), 'totval': AsIs(tot_val), 'siteaddr': AsIs(site_addr), 'ownaddr': AsIs(own_addr), 'geoid': AsIs(feature_id), 'cen_bgyr': AsIs(cenbgyr)})
+        {'table_name': AsIs(table_prefix+datadate), 'landuse': AsIs(land_use), 'totval': AsIs(tot_val), 'siteaddr': AsIs(site_addr), 'ownaddr': AsIs(own_addr), 'featureid': AsIs(feature_id), 'cen_bgyr': AsIs(cenbgyr)})
 
         rows = cur.fetchall()
 
@@ -139,7 +139,7 @@ def insertsingfamhouse(datadate,bgyr):
 
         #Query for single family owner occupied housing data
         cur.execute("""SELECT
-            bgs.%(geoid)s AS geoid,
+            bgs.%(featureid)s AS geoid,
             SUM(parcels.%(totval)s) / COUNT(parcels.%(totval)s) AS mean_sfoo_val,
             SUM(parcels.%(totval)s) AS tot_sfoo_val,
             COUNT(parcels.%(totval)s) AS num_sfoo
@@ -147,13 +147,13 @@ def insertsingfamhouse(datadate,bgyr):
         JOIN %(table_name)s AS parcels
         ON ST_Within(parcels.geom, bgs.geom)
         WHERE
-            bgs.%(geoid)s LIKE '37063%%' AND
+            bgs.%(featureid)s LIKE '37063%%' AND
             parcels.%(landuse)s = '111' AND
             ARRAY_LENGTH(ARRAY_INTERSECT(STRING_TO_ARRAY(%(siteaddr)s,' '),
                                          STRING_TO_ARRAY(%(ownaddr)s,' ')),1) > 1
-        GROUP BY bgs.%(geoid)s
+        GROUP BY bgs.%(featureid)s
         ORDER BY mean_sfoo_val""",
-        {'table_name': AsIs(table_prefix+datadate), 'landuse': AsIs(land_use), 'totval': AsIs(tot_val), 'siteaddr': AsIs(site_addr), 'ownaddr':    AsIs(own_addr), 'geoid': AsIs(feature_id), 'cen_bgyr': AsIs(cenbgyr)})
+        {'table_name': AsIs(table_prefix+datadate), 'landuse': AsIs(land_use), 'totval': AsIs(tot_val), 'siteaddr': AsIs(site_addr), 'ownaddr':    AsIs(own_addr), 'featureid': AsIs(feature_id), 'cen_bgyr': AsIs(cenbgyr)})
 
         rows = cur.fetchall()
 
