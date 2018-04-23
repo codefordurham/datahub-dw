@@ -1,4 +1,4 @@
-import psycopg2, sys
+import psycopg2,sys,pdb
 from psycopg2.extensions import AsIs
 import pandas as pd
 import numpy as np
@@ -26,11 +26,19 @@ def extractpropsales(datadate):
     geoids = f.readlines()
     f.close()
 
+    geotrts = []
+
+    for geoid in geoids:
+        geotrts.append(geoid.strip()[:len(geoid.strip())-1])
+
+    geotrts = list(set(geotrts))
+    geotrts.sort()
+
     conn = None
     try:
         conn = psycopg2.connect("dbname='durham_prop' user='jmcmanus' password='bulldurham'")
         cur = conn.cursor()
-        cur.execute("""SELECT %(geoid)s,
+        cur.execute("""SELECT %(geoid)s AS trtid10,
                       ROUND(mean_sale_price::NUMERIC, 2) AS meansp,
                       ROUND(min_sale_price::NUMERIC, 2) AS minsp,
                       ROUND(max_sale_price::NUMERIC, 2) AS maxsp,
@@ -42,16 +50,15 @@ def extractpropsales(datadate):
 
         rows = np.array(cur.fetchall())
 
-        for geoid in geoids:
-            index = np.where(rows == geoid.strip())
+        for geotrt in geotrts:
+            index = np.where(rows == geotrt)
 
             if index[0]:
                 row = rows[index[0]][0]
                 propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6]]],index=[row[0]],columns=columns)
-
                 propsales = propsales.append(propsale)
             else:
-                propsale = pd.DataFrame([['NaN','NaN','NaN','NaN','NaN','NaN']],index=[geoid.strip()],columns=columns)
+                propsale = pd.DataFrame([['NaN','NaN','NaN','NaN','NaN','NaN']],index=[geotrt],columns=columns)
                 propsales = propsales.append(propsale)
 
         return(propsales)
@@ -63,14 +70,14 @@ def extractpropsales(datadate):
             conn.close()
 
 f = open('propsalesltdb_9800_trts.csv','w')
-f.write(pd.concat([extractpropsales('2001')], axis=1).to_csv(index_label='id'))
+f.write(pd.concat([extractpropsales('2001')], axis=1).to_csv(index_label='trtid10'))
 f.close()
 f = open('propsalesltdb_0709_trts.csv','w')
-f.write(pd.concat([extractpropsales('2010')], axis=1).to_csv(index_label='id'))
+f.write(pd.concat([extractpropsales('2010')], axis=1).to_csv(index_label='trtid10'))
 f.close()
 f = open('propsalesltdb_1314_trts.csv','w')
-f.write(pd.concat([extractpropsales('100517')], axis=1).to_csv(index_label='id'))
+f.write(pd.concat([extractpropsales('100517')], axis=1).to_csv(index_label='trtid10'))
 f.close()
 f = open('propsalesltdb_1517_trts.csv','w')
-f.write(pd.concat([extractpropsales('011818')], axis=1).to_csv(index_label='id'))
+f.write(pd.concat([extractpropsales('011818')], axis=1).to_csv(index_label='trtid10'))
 f.close()
