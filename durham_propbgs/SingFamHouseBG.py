@@ -115,7 +115,7 @@ def insertsingfamhouse(datadate,bgyr):
             COUNT(parcels.%(totval)s) AS num_sfno
         FROM %(cen_bgyr)s AS bgs
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, bgs.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), bgs.geom)
         WHERE
             parcels.%(landuse)s = '111' AND
             bgs.%(featureid)s LIKE '37063%%' AND
@@ -145,7 +145,7 @@ def insertsingfamhouse(datadate,bgyr):
             COUNT(parcels.%(totval)s) AS num_sfoo
         FROM %(cen_bgyr)s AS bgs
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, bgs.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), bgs.geom)
         WHERE
             bgs.%(featureid)s LIKE '37063%%' AND
             parcels.%(landuse)s = '111' AND
@@ -176,11 +176,11 @@ def insertsingfamhouse(datadate,bgyr):
             conn.close()
 
 # Runs the programs.
-#createsingfamhouse("100517","bgs")
-#insertsingfamhouse("100517","bgs")
-#createsingfamhouse("011818","bgs")
-#insertsingfamhouse("011818","bgs")
-#createsingfamhouse("2001","bgs")
-#insertsingfamhouse('2001',"bgs")
+createsingfamhouse("100517","bgs")
+insertsingfamhouse("100517","bgs")
+createsingfamhouse("011818","bgs")
+insertsingfamhouse("011818","bgs")
+createsingfamhouse("2001","bgs")
+insertsingfamhouse('2001',"bgs")
 createsingfamhouse("2001","bgs00")
 insertsingfamhouse('2001',"bgs00")

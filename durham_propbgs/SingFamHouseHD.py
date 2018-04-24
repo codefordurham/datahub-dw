@@ -57,7 +57,7 @@ def insertsingfamhouse(datadate):
             COUNT(parcels.total_valu) AS num_sfno
         FROM neighborhoods_ft AS hds
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, hds.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), hds.geom)
         WHERE
             parcels.land_use = '111' AND
             ARRAY_LENGTH(ARRAY_INTERSECT(STRING_TO_ARRAY(site_addre,' '),
@@ -84,7 +84,7 @@ def insertsingfamhouse(datadate):
             COUNT(parcels.total_valu) AS num_sfoo
         FROM neighborhoods_ft AS hds
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, hds.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), hds.geom)
         WHERE
             parcels.land_use = '111' AND
             ARRAY_LENGTH(ARRAY_INTERSECT(STRING_TO_ARRAY(site_addre,' '),

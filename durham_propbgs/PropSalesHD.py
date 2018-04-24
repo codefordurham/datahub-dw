@@ -70,7 +70,7 @@ def insertpropsale(begindate,enddate,datadate):
             COUNT(parcels.sale_price) AS num_sales
         FROM neighborhoods_ft AS hds
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, hds.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), hds.geom)
         WHERE
             parcels.land_use = '111' AND
             parcels.sale_price > 0 AND

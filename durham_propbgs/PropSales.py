@@ -12,6 +12,8 @@ def createpropsale(datadate,featuretype):
                 geoid_yr = 'geoid00'
             elif featuretype == 'trts':
                 geoid_yr = 'geoid10'
+            elif featuretype == 'bgs':
+                geoid_yr = 'geoid00'
             else:
                 sys.exit('Incorrect featureid')
         elif datadate == '2010':
@@ -142,7 +144,7 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
             COUNT(parcels.%(saleprice)s) AS num_sales
         FROM %(censustable)s AS feature
         JOIN %(table_name)s AS parcels
-        ON ST_Within(parcels.geom, feature.geom)
+        ON ST_Within(ST_Centroid(parcels.geom), feature.geom)
         WHERE
             feature.%(featureid)s LIKE '37063%%' AND
             parcels.%(landuse)s = '111' AND
@@ -171,20 +173,20 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
             conn.close()
 
 # Runs the programs.
-#createpropsale("011818","bgs")
-#createpropsale("100517","bgs")
-#createpropsale("2001","bgs")
-#insertpropsale("20151001","20171231","011818","bgs")
-#insertpropsale("20130101","20141231","100517","bgs")
-#insertpropsale("19980101","20001231","2001","bgs")
-#createpropsale("2001","trts00")
-#insertpropsale("19980101","20001231","2001","trts00")
-#createpropsale("2001","trts")
-#insertpropsale("19980101","20001231","2001","trts")
+createpropsale("011818","bgs")
+insertpropsale("20151001","20171231","011818","bgs")
+createpropsale("100517","bgs")
+insertpropsale("20130101","20141231","100517","bgs")
+createpropsale("2001","bgs")
+insertpropsale("19980101","20001231","2001","bgs")
+createpropsale("2001","trts00")
+insertpropsale("19980101","20001231","2001","trts00")
+createpropsale("2001","trts")
+insertpropsale("19980101","20001231","2001","trts")
 createpropsale("2010","trts")
 insertpropsale("20081001","20091231","2010","trts")
-#createpropsale("100517","trts")
-#insertpropsale("20130101","20141231","100517","trts")
-#createpropsale("011818","trts")
-#insertpropsale("20151001","20171231","011818","trts")
+createpropsale("100517","trts")
+insertpropsale("20130101","20141231","100517","trts")
+createpropsale("011818","trts")
+insertpropsale("20151001","20171231","011818","trts")
 
