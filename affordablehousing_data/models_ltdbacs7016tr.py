@@ -1,3 +1,5 @@
+from django.db import models
+
 class LTDBACS_trts_7016(models.Model):
    id = models.TextField(12,primary_key=True)   pop70 = models.DecimalField(max_digits=8,decimal_places=2,null=False)
    nhwht70 = models.DecimalField(max_digits=8,decimal_places=2,null=False)
@@ -265,6 +267,8 @@ class LTDBACS_trts_7016(models.Model):
    mrent16 = models.DecimalField(max_digits=7,decimal_places=2,null=True)
    mhmval16a17 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
    mrent16a17 = models.DecimalField(max_digits=8,decimal_places=2,null=True)
+   cmhmval0016a17 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
+   cmrent0016a17 = models.DecimalField(max_digits=7,decimal_places=2,null=True)
    hinc16 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    hinc16a17 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
    hincw16 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
@@ -295,8 +299,14 @@ class LTDBACS_trts_7016(models.Model):
    mediansp1517a17 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
    totsp1517a17 = models.DecimalField(max_digits=13,decimal_places=2,null=True)
    pir1517 = models.DecimalField(max_digits=5,decimal_places=2,null=True)
+   chinc0016a17 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
+   chincw0016a17 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
+   chincb0016a17 = models.DecimalField(max_digits=8,decimal_places=2,null=True)
+   chinca0016a17 = models.DecimalField(max_digits=8,decimal_places=2,null=True)
+   chinch0016a17 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    ag25up16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    colm16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    colf16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    col16 = models.DecimalField(max_digits=5,decimal_places=1,null=False)
    pcol16 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
+   pccol0016 = models.DecimalField(max_digits=6,decimal_places=2,null=True)

@@ -16,6 +16,7 @@ def createpropsale(datadate):
                           min_sale_price float8,
                           max_sale_price float8,
                           median_sale_price float8,
+                          stddev_sale_price float8,
                           total_sale_price float8,
                           num_sales int,
                           begin_date date,
@@ -66,6 +67,7 @@ def insertpropsale(begindate,enddate,datadate):
             MIN(parcels.sale_price) AS min_sale_price,
             MAX(parcels.sale_price) AS max_sale_price,
             MEDIAN(parcels.sale_price) AS median_sale_price,
+            STDDEV_SAMP(parcels.sale_price) AS stddev_sale_price,
             SUM(parcels.sale_price) AS total_sale_price,
             COUNT(parcels.sale_price) AS num_sales
         FROM neighborhoods_ft AS hds
@@ -86,7 +88,7 @@ def insertpropsale(begindate,enddate,datadate):
         cur.execute("BEGIN")
 
         for row in rows:
-            cur.execute("INSERT INTO propsales_hds_"+datadate+" (objectid,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+begindate+"','"+enddate+"')")
+            cur.execute("INSERT INTO propsales_hds_"+datadate+" (objectid,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,stddev_sale_price float8,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+str(row[7])+"','"+begindate+"','"+enddate+"')")
 
         cur.execute("COMMIT")
         cur.execute("ANALYZE %(table_name)s",{'table_name': AsIs('propsales_hds_'+datadate)})

@@ -1,4 +1,4 @@
-class bgs1317(models.Model):
+class bgs1318(models.Model):
    id = models.TextField(12,primary_key=True)
    meansp1314 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    meansp1314a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
@@ -8,6 +8,8 @@ class bgs1317(models.Model):
    maxsp1314a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    mediansp1314 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    mediansp1314a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
+   stddevsp1314 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
+   stddevsp1314a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    totsp1314 = models.DecimalField(max_digits=12,decimal_places=2,null=True)
    totsp1314a17 = models.DecimalField(max_digits=13,decimal_places=2,null=True)
    nums1314 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
@@ -41,6 +43,8 @@ class bgs1317(models.Model):
    maxsp1517a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    mediansp1517 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    mediansp1517a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
+   stddevsp1517 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
+   stddevsp1517a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    totsp1517 = models.DecimalField(max_digits=12,decimal_places=2,null=True)
    totsp1517a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    nums1517 = models.DecimalField(max_digits=6,decimal_places=2,null=True)

@@ -16,7 +16,7 @@ def extractpropsales(datadate):
     else:
         sys.exit('Incorrect datadate')
 
-    columns = ["meansp"+datename,"minsp"+datename,"maxsp"+datename,"mediansp"+datename,"totsp"+datename,"nums"+datename]
+    columns = ["meansp"+datename,"minsp"+datename,"maxsp"+datename,"mediansp"+datename,"stddevsp"+datename,"totsp"+datename,"nums"+datename]
     geo_id = 'geoid10'
     tablename = 'propsales_trts_'+datadate
 
@@ -43,6 +43,7 @@ def extractpropsales(datadate):
                       ROUND(min_sale_price::NUMERIC, 2) AS minsp,
                       ROUND(max_sale_price::NUMERIC, 2) AS maxsp,
                       ROUND(median_sale_price::NUMERIC, 2) AS mediansp,
+                      ROUND(stddev_sale_price::NUMERIC, 2) AS stddevsp,
                       ROUND(total_sale_price::NUMERIC, 2) AS totsp, num_sales AS nums
                     FROM %(table_name)s
                     ORDER BY %(geoid)s""",
@@ -55,10 +56,10 @@ def extractpropsales(datadate):
 
             if index[0]:
                 row = rows[index[0]][0]
-                propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6]]],index=[row[0]],columns=columns)
+                propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6],row[7]]],index=[row[0]],columns=columns)
                 propsales = propsales.append(propsale)
             else:
-                propsale = pd.DataFrame([['NaN','NaN','NaN','NaN','NaN','NaN']],index=[geotrt],columns=columns)
+                propsale = pd.DataFrame([['NaN','NaN','NaN','NaN','NaN','NaN','NaN']],index=[geotrt],columns=columns)
                 propsales = propsales.append(propsale)
 
         return(propsales)

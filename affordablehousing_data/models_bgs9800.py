@@ -1,4 +1,4 @@
-class bgs00(models.Model):
+class bgs9800(models.Model):
    id = models.TextField(12,primary_key=True)
    meansp9800 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
    meansp9800a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
@@ -8,6 +8,8 @@ class bgs00(models.Model):
    maxsp9800a17 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
    mediansp9800 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
    mediansp9800a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
+   stddevsp9800 = models.DecimalField(max_digits=10,decimal_places=2,null=True)
+   stddevsp9800a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    totsp9800 = models.DecimalField(max_digits=11,decimal_places=2,null=True)
    totsp9800a17 = models.DecimalField(max_digits=12,decimal_places=2,null=True)
    nums9800 = models.DecimalField(max_digits=6,decimal_places=2,null=True)

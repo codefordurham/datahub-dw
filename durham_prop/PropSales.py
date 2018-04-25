@@ -1,4 +1,5 @@
-import psycopg2,sys,pdb
+import psycopg2,sys
+import numpy as np
 from psycopg2.extensions import AsIs
 
 def createpropsale(datadate,featuretype):
@@ -37,6 +38,7 @@ def createpropsale(datadate,featuretype):
                           min_sale_price float8,
                           max_sale_price float8,
                           median_sale_price float8,
+                          stddev_sale_price float,
                           total_sale_price float8,
                           num_sales int,
                           begin_date date,
@@ -140,6 +142,7 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
             MIN(parcels.%(saleprice)s) AS min_sale_price,
             MAX(parcels.%(saleprice)s) AS max_sale_price,
             MEDIAN(parcels.%(saleprice)s) AS median_sale_price,
+            STDDEV_SAMP(parcels.%(saleprice)s) AS stddev_sale_price,
             SUM(parcels.%(saleprice)s) AS total_sale_price,
             COUNT(parcels.%(saleprice)s) AS num_sales
         FROM %(censustable)s AS feature
@@ -161,7 +164,10 @@ def insertpropsale(begindate,enddate,datadate,featuretype):
         cur.execute("BEGIN")
 
         for row in rows:
-            cur.execute("INSERT INTO propsales_"+table_suffix+" (%(geoid)s,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+begindate+"','"+enddate+"')",{'geoid':AsIs(geoid_yr)})
+            if row[5] == None:
+                cur.execute("INSERT INTO propsales_"+table_suffix+" (%(geoid)s,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,      stddev_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+      str(row[4])+"','"+"NaN"+"','"+str(row[6])+"','"+str(row[7])+"','"+begindate+"','"+enddate+"')",{'geoid':AsIs(geoid_yr)})
+            else:
+                cur.execute("INSERT INTO propsales_"+table_suffix+" (%(geoid)s,mean_sale_price,min_sale_price,max_sale_price,median_sale_price,stddev_sale_price,total_sale_price,num_sales,begin_date,end_date) VALUES ('"+row[0]+"','"+str(row[1])+"','"+str(row[2])+"','"+str(row[3])+"','"+str(row[4])+"','"+str(row[5])+"','"+str(row[6])+"','"+str(row[7])+"','"+begindate+"','"+enddate+"')",{'geoid':AsIs(geoid_yr)})
 
         cur.execute("COMMIT")
         cur.execute("ANALYZE %(table_name)s",{'table_name': AsIs('propsales_'+table_suffix)})
