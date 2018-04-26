@@ -1,3 +1,3 @@
 psql -U jmcmanus -d datahub -a -f durham_ltdbacs_7016_tr.sql
-psql -U jmcmanus -d datahub -a -f durham_bgs00.sql
-psql -U jmcmanus -d datahub -a -f durham_bgs1317.sql
+psql -U jmcmanus -d datahub -a -f durham_bgs9800.sql
+psql -U jmcmanus -d datahub -a -f durham_bgs1318.sql
