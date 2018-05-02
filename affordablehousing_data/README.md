@@ -1,7 +1,7 @@
-##Data used on by the datahub-be site
+Data used on by the datahub-be site
 ---
-datahub_ingest.bin - Run this file to ingest data into the datahub-be database. It 
-contains three psql command ingest that csv file listed below, using the sql files
+* datahub_ingest.bin - Run this file to ingest data into the datahub-be database. It 
+contains three psql command that ingest the csv files listed below, using the sql files
 listed below.
 
 * durham_ltdbacs_7016_tr.csv - Census tract data ingested into the datahub-be database  
