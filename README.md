@@ -1,10 +1,10 @@
 # datahub-dw
 Data Wranglings for the Affordable Housing project
-
+---
 The affordable housing project has a frontend and backend websites: 
 
-Frontend Website Repository - https://github.com/codefordurham/affordablehousing
-Backend Website Repository - https://github.com/codefordurham/datahub-be
+* Frontend Website Repository - https://github.com/codefordurham/affordablehousing
+* Backend Website Repository - https://github.com/codefordurham/datahub-be
 
 The frontend was developed using Vue, and contains a web interface that includes
 interactive maps developed using D3. The backend was developed using Django Rest 
