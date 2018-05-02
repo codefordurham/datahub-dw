@@ -1,25 +1,31 @@
-Data used on by the datahub-be site.
-datahub_ingest.bin - comand file that ingest data into the datahub-be database
-durham_ltdbacs_7016_tr.csv - Census tract data ingested into the datahub-be database  
-durham_ltdbacs_7016_tr.sql - SQL command used to ingest durham_ltdbacs_7016_tr.csv 
+Data used on by the datahub-be site
+---
+datahub_ingest.bin - Run this file to ingest data into the datahub-be database. It 
+contains three psql command ingest that csv file listed below, using the sql files
+listed below.
+
+. durham_ltdbacs_7016_tr.csv - Census tract data ingested into the datahub-be database  
+. durham_ltdbacs_7016_tr.sql - SQL command used to ingest durham_ltdbacs_7016_tr.csv 
 into datahub-be database
-durham_bgs9800.csv - Census blockgroup data ingested into the datahub-be database
-durham_bgs9800.sql - SQL command used to ingest the durham_bgs9800.csv into 
+. durham_bgs9800.csv - Census blockgroup data ingested into the datahub-be database
+. durham_bgs9800.sql - SQL command used to ingest the durham_bgs9800.csv into 
 datahub-be database 
-durham_bgs1318.csv - Census blockgroup data ingested into the datahub-be database
-durham_bgs1318.sql - SQL command used to ingest the durham_bgs1318.csv into
+. durham_bgs1318.csv - Census blockgroup data ingested into the datahub-be database
+. durham_bgs1318.sql - SQL command used to ingest the durham_bgs1318.csv into
 datahub-be database
 
 Jupyter notebooks that generate the blockgroup data ingested into the datahub-be
 database. It also generates the models and serializers for the datahub-be, and
 generates json tables used in the affordablehousing frontend.
-Concat_bgs1318.ipynb
-Concat_bgs9800.ipynb
+
+. Concat_bgs1318.ipynb
+. Concat_bgs9800.ipynb
 
 Models used in the datahub-be backend
-models_bgs1318.py
-models_bgs9800.py
-models_ltdbacs7016tr.py
+
+. models_bgs1318.py
+. models_bgs9800.py
+. models_ltdbacs7016tr.py
 
 serializers used in the datahub-be backend
 serializers_bgs1318.py
