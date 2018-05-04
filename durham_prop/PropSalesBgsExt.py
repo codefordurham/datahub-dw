@@ -64,7 +64,7 @@ def extractpropsales(begin_year):
         for geoid in geoids:
             index = np.where(rows == geoid.strip())
 
-            if index[0]:
+            if index[0] >= 0:
                 row = rows[index[0]][0]
                 if begin_year == '2013':
                     propsale = pd.DataFrame([[row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9]]], index=[row[0]], columns=columns)

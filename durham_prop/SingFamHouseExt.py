@@ -46,7 +46,7 @@ def extractsingfamhouse(datadate,featuretype):
         for featureid in featureids:
             index = np.where(rows[:,0] == featureid.strip())
 
-            if index[0]:
+            if index[0] >= 0:
                 row = rows[index[0]][0]
                 if row[3] != None:
                     if row[6] == None:
