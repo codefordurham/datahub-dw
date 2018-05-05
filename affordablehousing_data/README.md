@@ -21,6 +21,7 @@ generates json tables used in the affordablehousing frontend.
 
 * Concat_bgs1318.ipynb
 * Concat_bgs9800.ipynb
+* ltdbacs7016.ipynb
 
 Models used in the datahub-be backend
 
@@ -55,4 +56,23 @@ Data files used by the Jupyter notebooks
 * dec_pop_2000.csv
 * compass_pop_1314.csv
 * acs_pop_2016.csv
+
+* LTDB/durham_ltdb_std00_fullcount.csv
+* LTDB/durham_ltdb_std00_sample.csv
+* LTDB/durham_ltdb_std10_fullcount.csv
+* LTDB/durham_ltdb_std12_sample.csv
+* LTDB/durham_ltdb_std70_fullcount.csv
+* LTDB/durham_ltdb_std70_sample.csv
+* LTDB/durham_ltdb_std80_fullcount.csv
+* LTDB/durham_ltdb_std80_sample.csv
+* LTDB/durham_ltdb_std90_fullcount.csv
+* LTDB/durham_ltdb_std90_sample.csv
+* LTDB/durham_propsale_ltdb_std0712_sample.csv
+* LTDB/durham_propsale_ltdb_std9800_sample.csv
+
+* acs/acs_education_2016_tr.csv
+* acs/acs_housing_2016_tr.csv
+* acs/acs_population_2016_tr.csv
+* acs/acs_propsale_income_1517_tr.csv
+
 
