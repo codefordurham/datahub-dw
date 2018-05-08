@@ -241,7 +241,7 @@ class LTDBACS_trts_7016(models.Model):
    pcasian0010 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    pchisp0010 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    cmhmval0012a17 = models.DecimalField(max_digits=9,decimal_places=2,null=True)
-   pcmhmval0012a17 = models.DecimalField(max_digits=6,decimal_places=2,null=True)
+   pcmhmval0012a17 = models.DecimalField(max_digits=14,decimal_places=2,null=True)
    cmrent0012a17 = models.DecimalField(max_digits=7,decimal_places=2,null=False)
    pcmrent0012a17 = models.DecimalField(max_digits=6,decimal_places=2,null=False)
    chinc0012a17 = models.DecimalField(max_digits=9,decimal_places=2,null=False)
