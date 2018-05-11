@@ -1,0 +1,79 @@
+var|desc|unit|group
+pop|Total Population|#|democount
+nhwht|Total White Population|#|democount
+pnhwht|Percent White Population|%|demopercent
+nhblk|Total Black Population|#|democount
+pnhblk|Percent Black Population|%|demopercent
+ntv|Total Native Population|#|democount
+pntv|Percent Native Population|%|demopercent
+asian|Total Asian Population|#|democount
+pasian|Percent Asian Population|%|demopercent
+haw|Total Hawaiian Population|#|democount
+phaw|Percent Hawaiian Population|%|demopercent
+oth|Total Other Population|#|democount
+poth|Percent Other Population|%|demopercent
+twomr|Total Two or More Races Population|#|democount 
+ptwomr|Percent Two or More Races Population|%|demopercent
+hisp|Total Hispanic Population|#|democount
+phisp|Percent Hispanic Population|%|demopercent
+hu|Total Housing Units|#|realcount
+ohu|Total Occupied Housing|#|realcount
+pohu|Percent Occupied Housing|%|realpercent
+vac|Total Vacant Housing|# |realcount
+pvac|Percent Vacant Housing|%|realpercent
+own|Total Owner Occupied Housing|#|realcount
+pown|Percent Owner Occupied Housing|%|realpercent
+rent|Total Rental Housing|#|realcount
+prent|Percent Rental Housing|%|realpercent
+mhmval|Median Home Value|$|realvalue
+mrent|Median Rent|$|realvalue
+hinc|Median Household Income|$|income
+hincw|Median Household Income for Whites|$|income
+hincb|Median Household Income for Blacks|$|income
+hincn|Median Household Income for Natives|$|income
+hinca|Median Household Income for Asians|$|income
+hincp|Median Household Income for Hawaiians|$|income
+hinco|Median Household Income for Other|$|income
+hincm|Median Household Income for Two or More Races|$|income
+hinch|Median Household Income for Hispanics|$|income
+meansp|Mean Sale Price of Single Family Homes|$|realvalue
+minsp|Minimum Sale Price of Single Family Homes|$|realvalue
+maxsp|Maximum Sale Price of Single Family Homes|$|realvalue
+mediansp|Median Sale Price of Single Family Homes|$|realvalue
+stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realvalue
+totsp|Total Sale Price of Single Family Homes|$|realvalue
+nums|Number of Homes Sold|#|realvalue
+pir|Price Income Ratio|\u0020|pir
+cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealvalue
+cmediansp|Change in Median Sale Price for Single Family Homes|$|crealvalue
+pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pccrealvalue
+pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pccrealvalue
+ag25up|Age 25 and Older|#|democount
+hs|Number of High School Graduates|#|education
+phs|Percent High School Graduates|%|education
+col|Number of College Graduates|#|education
+colm|Number of Male College Graduates|#|education
+colf|Number of Female College Graduates|#|education
+pcol|Percent College Graduates|%|education
+clf|Civilian Labor Force|#|employment
+unemp|Number of Unemployed|#|employment
+punemp|Percent Unempolyment|%|employment
+pcnhwht|Percent Change in White Population|%|pcdemo
+pcnhblk|Percent Change in Black Population|%|pcdemo
+pcasian|Percent Change in Asian Population|%|pcdemo
+pchisp|Percent Change in Hispanic Population|%|pcdemo
+cmhmval|Change in Median Home Value|$|crealvalue
+cmrent|Change in Median Rent|$|crealvalue
+pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
+pcmrent|Percent Change in Median Rent|%|pcrealvalue
+chinc|Change in Household Income|$|cincome
+chincw|Change in Household Income for White Population|$|cincome
+chincb|Change in Household Income for Black Population|$|cincome
+chinca|Change in Household Income for Asian Population|$|cincome
+chinch|Change in Household Income for Hispanic Population|$|cincome
+pchinc|Percent Change in Household Income|%|pcincome
+pchincw|Percent Change in Household Income for White Population|%|pcincome
+pchincb|Percent Change in Household Income for Black Population|%|pcincome
+pchinca|Percent Change in Household Income for Asian Population|%|pcincome
+pchinch|Percent Change in Household Income for Hispanic Population|%|pcincome
+pccol|Percent Change in College Graduates|%|education

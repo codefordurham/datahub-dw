@@ -1,373 +1,5 @@
-        {label: 'Total Population in 1970', value: 'pop70', type: 'trts'},
-        {label: 'Total White Population in 1970', value: 'nhwht70', type: 'trts'},
-        {label: 'Percent White Population in 1970', value: 'pnhwht70', type: 'trts'},
-        {label: 'Total Black Population in 1970', value: 'nhblk70', type: 'trts'},
-        {label: 'Percent Black Population in 1970', value: 'pnhblk70', type: 'trts'},
-        {label: 'Total Asian Population in 1970', value: 'asian70', type: 'trts'},
-        {label: 'Percent Asian Population in 1970', value: 'pasian70', type: 'trts'},
-        {label: 'Total Hawaiian Population in 1970', value: 'haw70', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 1970', value: 'phaw70', type: 'trts'},
-        {label: 'Total Housing Units in 1970', value: 'hu70', type: 'trts'},
-        {label: 'Total Vacant Housing in 1970', value: 'vac70', type: 'trts'},
-        {label: 'Percent Vacant Housing in 1970', value: 'pvac70', type: 'trts'},
-        {label: 'Total Occupied Housing in 1970', value: 'ohu70', type: 'trts'},
-        {label: 'Percent Occupied Housing in 1970', value: 'pohu70', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 1970', value: 'own70', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 1970', value: 'pown70', type: 'trts'},
-        {label: 'Total Rental Housing in 1970', value: 'rent70', type: 'trts'},
-        {label: 'Percent Rental Housing in 1970', value: 'prent70', type: 'trts'},
-        {label: 'Median Home Value in 1970, Adjusted to 2017 Dollars', value: 'mhmval70a17', type: 'trts'},
-        {label: 'Median Home Value in 1970', value: 'mhmval70', type: 'trts'},
-        {label: 'Median Rent in 1970', value: 'mrent70', type: 'trts'},
-        {label: 'Median Rent in 1970, Adjusted to 2017 Dollars', value: 'mrent70a17', type: 'trts'},
-        {label: 'Median Household Income in 1970', value: 'hinc70', type: 'trts'},
-        {label: 'Median Household Income in 1970, Adjusted to 2017 Dollars', value: 'hinc70a17', type: 'trts'},
-        {label: 'Age 25 and Older in 1970', value: 'ag25up70', type: 'trts'},
-        {label: 'Number of High School Graduates in 1970', value: 'hs70', type: 'trts'},
-        {label: 'Percent High School Graduates in 1970', value: 'phs70', type: 'trts'},
-        {label: 'Number of College Graduates in 1970', value: 'col70', type: 'trts'},
-        {label: 'Percent College Graduates in 1970', value: 'pcol70', type: 'trts'},
-        {label: 'Civilian Labor Force in 1970', value: 'clf70', type: 'trts'},
-        {label: 'Number of Unemployed in 1970', value: 'unemp70', type: 'trts'},
-        {label: 'Percent Unempolyment in 1970', value: 'punemp70', type: 'trts'},
-        {label: 'Total Population in 1980', value: 'pop80', type: 'trts'},
-        {label: 'Total White Population in 1980', value: 'nhwht80', type: 'trts'},
-        {label: 'Percent White Population in 1980', value: 'pnhwht80', type: 'trts'},
-        {label: 'Total Black Population in 1980', value: 'nhblk80', type: 'trts'},
-        {label: 'Percent Black Population in 1980', value: 'pnhblk80', type: 'trts'},
-        {label: 'Total Native Population in 1980', value: 'ntv80', type: 'trts'},
-        {label: 'Percent Native Population in 1980', value: 'pntv80', type: 'trts'},
-        {label: 'Total Asian Population in 1980', value: 'asian80', type: 'trts'},
-        {label: 'Percent Asian Population in 1980', value: 'pasian80', type: 'trts'},
-        {label: 'Total Hispanic Population in 1980', value: 'hisp80', type: 'trts'},
-        {label: 'Percent Hispanic Population in 1980', value: 'phisp80', type: 'trts'},
-        {label: 'Total Hawaiian Population in 1980', value: 'haw80', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 1980', value: 'phaw80', type: 'trts'},
-        {label: 'Total Housing Units in 1980', value: 'hu80', type: 'trts'},
-        {label: 'Total Vacant Housing in 1980', value: 'vac80', type: 'trts'},
-        {label: 'Percent Vacant Housing in 1980', value: 'pvac80', type: 'trts'},
-        {label: 'Total Occupied Housing in 1980', value: 'ohu80', type: 'trts'},
-        {label: 'Percent Occupied Housing in 1980', value: 'pohu80', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 1980', value: 'own80', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 1980', value: 'pown80', type: 'trts'},
-        {label: 'Total Rental Housing in 1980', value: 'rent80', type: 'trts'},
-        {label: 'Percent Rental Housing in 1980', value: 'prent80', type: 'trts'},
-        {label: 'Median Home Value in 1980', value: 'mhmval80', type: 'trts'},
-        {label: 'Median Home Value in 1980, Adjusted to 2017 Dollars', value: 'mhmval80a17', type: 'trts'},
-        {label: 'Median Rent in 1980', value: 'mrent80', type: 'trts'},
-        {label: 'Median Rent in 1980, Adjusted to 2017 Dollars', value: 'mrent80a17', type: 'trts'},
-        {label: 'Median Household Income in 1980', value: 'hinc80', type: 'trts'},
-        {label: 'Median Household Income in 1980, Adjusted to 2017 Dollars', value: 'hinc80a17', type: 'trts'},
-        {label: 'Median Household Income for Whites in 1980', value: 'hincw80', type: 'trts'},
-        {label: 'Median Household Income for Whites in 1980, Adjusted to 2017 Dollars', value: 'hincw80a17', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 1980', value: 'hincb80', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 1980, Adjusted to 2017 Dollars', value: 'hincb80a17', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 1980', value: 'hinch80', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 1980, Adjusted to 2017 Dollars', value: 'hinch80a17', type: 'trts'},
-        {label: 'Median Household Income for Asians in 1980', value: 'hinca80', type: 'trts'},
-        {label: 'Median Household Income for Asians in 1980, Adjusted to 2017 Dollars', value: 'hinca80a17', type: 'trts'},
-        {label: 'Age 25 and Older in 1980', value: 'ag25up80', type: 'trts'},
-        {label: 'Number of High School Graduates in 1980', value: 'hs80', type: 'trts'},
-        {label: 'Percent High School Graduates in 1980', value: 'phs80', type: 'trts'},
-        {label: 'Number of College Graduates in 1980', value: 'col80', type: 'trts'},
-        {label: 'Percent College Graduates in 1980', value: 'pcol80', type: 'trts'},
-        {label: 'Civilian Labor Force in 1980', value: 'clf80', type: 'trts'},
-        {label: 'Number of Unemployed in 1980', value: 'unemp80', type: 'trts'},
-        {label: 'Percent Unempolyment in 1980', value: 'punemp80', type: 'trts'},
-        {label: 'Total Population in 1990', value: 'pop90', type: 'trts'},
-        {label: 'Total White Population in 1990', value: 'nhwht90', type: 'trts'},
-        {label: 'Percent White Population in 1990', value: 'pnhwht90', type: 'trts'},
-        {label: 'Total Black Population in 1990', value: 'nhblk90', type: 'trts'},
-        {label: 'Percent Black Population in 1990', value: 'pnhblk90', type: 'trts'},
-        {label: 'Total Native Population in 1990', value: 'ntv90', type: 'trts'},
-        {label: 'Percent Native Population in 1990', value: 'pntv90', type: 'trts'},
-        {label: 'Total Asian Population in 1990', value: 'asian90', type: 'trts'},
-        {label: 'Percent Asian Population in 1990', value: 'pasian90', type: 'trts'},
-        {label: 'Total Hispanic Population in 1990', value: 'hisp90', type: 'trts'},
-        {label: 'Percent Hispanic Population in 1990', value: 'phisp90', type: 'trts'},
-        {label: 'Total Hawaiian Population in 1990', value: 'haw90', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 1990', value: 'phaw90', type: 'trts'},
-        {label: 'Total Housing Units in 1990', value: 'hu90', type: 'trts'},
-        {label: 'Total Vacant Housing in 1990', value: 'vac90', type: 'trts'},
-        {label: 'Percent Vacant Housing in 1990', value: 'pvac90', type: 'trts'},
-        {label: 'Total Occupied Housing in 1990', value: 'ohu90', type: 'trts'},
-        {label: 'Percent Occupied Housing in 1990', value: 'pohu90', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 1990', value: 'own90', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 1990', value: 'pown90', type: 'trts'},
-        {label: 'Total Rental Housing in 1990', value: 'rent90', type: 'trts'},
-        {label: 'Percent Rental Housing in 1990', value: 'prent90', type: 'trts'},
-        {label: 'Median Home Value in 1990', value: 'mhmval90', type: 'trts'},
-        {label: 'Median Home Value in 1990, Adjusted to 2017 Dollars', value: 'mhmval90a17', type: 'trts'},
-        {label: 'Median Rent in 1990', value: 'mrent90', type: 'trts'},
-        {label: 'Median Rent in 1990, Adjusted to 2017 Dollars', value: 'mrent90a17', type: 'trts'},
-        {label: 'Median Household Income in 1990', value: 'hinc90', type: 'trts'},
-        {label: 'Median Household Income in 1990, Adjusted to 2017 Dollars', value: 'hinc90a17', type: 'trts'},
-        {label: 'Median Household Income for Whites in 1990', value: 'hincw90', type: 'trts'},
-        {label: 'Median Household Income for Whites in 1990, Adjusted to 2017 Dollars', value: 'hincw90a17', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 1990', value: 'hincb90', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 1990, Adjusted to 2017 Dollars', value: 'hincb90a17', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 1990', value: 'hinch90', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 1990, Adjusted to 2017 Dollars', value: 'hinch90a17', type: 'trts'},
-        {label: 'Median Household Income for Asians in 1990', value: 'hinca90', type: 'trts'},
-        {label: 'Median Household Income for Asians in 1990, Adjusted to 2017 Dollars', value: 'hinca90a17', type: 'trts'},
-        {label: 'Age 25 and Older in 1990', value: 'ag25up90', type: 'trts'},
-        {label: 'Number of High School Graduates in 1990', value: 'hs90', type: 'trts'},
-        {label: 'Percent High School Graduates in 1990', value: 'phs90', type: 'trts'},
-        {label: 'Number of College Graduates in 1990', value: 'col90', type: 'trts'},
-        {label: 'Percent College Graduates in 1990', value: 'pcol90', type: 'trts'},
-        {label: 'Civilian Labor Force in 1990', value: 'clf90', type: 'trts'},
-        {label: 'Number of Unemployed in 1990', value: 'unemp90', type: 'trts'},
-        {label: 'Percent Unempolyment in 1990', value: 'punemp90', type: 'trts'},
-        {label: 'Total Population in 2000', value: 'pop00', type: 'trts'},
-        {label: 'Total White Population in 2000', value: 'nhwht00', type: 'trts'},
-        {label: 'Percent White Population in 2000', value: 'pnhwht00', type: 'trts'},
-        {label: 'Total Black Population in 2000', value: 'nhblk00', type: 'trts'},
-        {label: 'Percent Black Population in 2000', value: 'pnhblk00', type: 'trts'},
-        {label: 'Total Native Population in 2000', value: 'ntv00', type: 'trts'},
-        {label: 'Percent Native Population in 2000', value: 'pntv00', type: 'trts'},
-        {label: 'Total Asian Population in 2000', value: 'asian00', type: 'trts'},
-        {label: 'Percent Asian Population in 2000', value: 'pasian00', type: 'trts'},
-        {label: 'Total Hispanic Population in 2000', value: 'hisp00', type: 'trts'},
-        {label: 'Percent Hispanic Population in 2000', value: 'phisp00', type: 'trts'},
-        {label: 'Total Hawaiian Population in 2000', value: 'haw00', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 2000', value: 'phaw00', type: 'trts'},
-        {label: 'Total Housing Units in 2000', value: 'hu00', type: 'trts'},
-        {label: 'Total Vacant Housing in 2000', value: 'vac00', type: 'trts'},
-        {label: 'Percent Vacant Housing in 2000', value: 'pvac00', type: 'trts'},
-        {label: 'Total Occupied Housing in 2000', value: 'ohu00', type: 'trts'},
-        {label: 'Percent Occupied Housing in 2000', value: 'pohu00', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 2000', value: 'own00', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 2000', value: 'pown00', type: 'trts'},
-        {label: 'Total Rental Housing in 2000', value: 'rent00', type: 'trts'},
-        {label: 'Percent Rental Housing in 2000', value: 'prent00', type: 'trts'},
-        {label: 'Median Home Value in 2000', value: 'mhmval00', type: 'trts'},
-        {label: 'Median Home Value in 2000, Adjusted to 2017 Dollars', value: 'mhmval00a17', type: 'trts'},
-        {label: 'Median Rent in 2000', value: 'mrent00', type: 'trts'},
-        {label: 'Median Rent in 2000, Adjusted to 2017 Dollars', value: 'mrent00a17', type: 'trts'},
-        {label: 'Median Household Income in 2000', value: 'hinc00', type: 'trts'},
-        {label: 'Median Household Income in 2000, Adjusted to 2017 Dollars', value: 'hinc00a17', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2000', value: 'hincw00', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2000, Adjusted to 2017 Dollars', value: 'hincw00a17', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2000', value: 'hincb00', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2000, Adjusted to 2017 Dollars', value: 'hincb00a17', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2000', value: 'hinch00', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2000, Adjusted to 2017 Dollars', value: 'hinch00a17', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2000', value: 'hinca00', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2000, Adjusted to 2017 Dollars', value: 'hinca00a17', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 1998 and 2000, ', value: 'meansp9800', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 1998 and 2000, ', value: 'minsp9800', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 1998 and 2000, ', value: 'maxsp9800', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 1998 and 2000, ', value: 'mediansp9800', type: 'trts'},
-        {label: 'Standard Deviation of Sale Price for Single Family Homes between 1998 and 2000, ', value: 'stddevsp9800', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 1998 and 2000, ', value: 'totsp9800', type: 'trts'},
-        {label: 'Number of Homes Sold between 1998 and 2000, ', value: 'nums9800', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 1998 and 2000, Adjusted to 2017 Dollars', value: 'meansp9800a17', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 1998 and 2000, Adjusted to 2017 Dollars', value: 'minsp9800a17', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 1998 and 2000, Adjusted to 2017 Dollars', value: 'maxsp9800a17', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 1998 and 2000, Adjusted to 2017 Dollars', value: 'mediansp9800a17', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 1998 and 2000, Adjusted to 2017 Dollars', value: 'totsp9800a17', type: 'trts'},
-        {label: 'Price Income Ratio between 1998 and 2000, ', value: 'pir9800', type: 'trts'},
-        {label: 'Age 25 and Older in 2000', value: 'ag25up00', type: 'trts'},
-        {label: 'Number of High School Graduates in 2000', value: 'hs00', type: 'trts'},
-        {label: 'Percent High School Graduates in 2000', value: 'phs00', type: 'trts'},
-        {label: 'Number of College Graduates in 2000', value: 'col00', type: 'trts'},
-        {label: 'Percent College Graduates in 2000', value: 'pcol00', type: 'trts'},
-        {label: 'Civilian Labor Force in 2000', value: 'clf00', type: 'trts'},
-        {label: 'Number of Unemployed in 2000', value: 'unemp00', type: 'trts'},
-        {label: 'Percent Unempolyment in 2000', value: 'punemp00', type: 'trts'},
-        {label: 'Total Population in 2010', value: 'pop10', type: 'trts'},
-        {label: 'Total White Population in 2010', value: 'nhwht10', type: 'trts'},
-        {label: 'Percent White Population in 2010', value: 'pnhwht10', type: 'trts'},
-        {label: 'Total Black Population in 2010', value: 'nhblk10', type: 'trts'},
-        {label: 'Percent Black Population in 2010', value: 'pnhblk10', type: 'trts'},
-        {label: 'Total Native Population in 2010', value: 'ntv10', type: 'trts'},
-        {label: 'Percent Native Population in 2010', value: 'pntv10', type: 'trts'},
-        {label: 'Total Asian Population in 2010', value: 'asian10', type: 'trts'},
-        {label: 'Percent Asian Population in 2010', value: 'pasian10', type: 'trts'},
-        {label: 'Total Hispanic Population in 2010', value: 'hisp10', type: 'trts'},
-        {label: 'Percent Hispanic Population in 2010', value: 'phisp10', type: 'trts'},
-        {label: 'Total Hawaiian Population in 2010', value: 'haw10', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 2010', value: 'phaw10', type: 'trts'},
-        {label: 'Total Housing Units in 2010', value: 'hu10', type: 'trts'},
-        {label: 'Total Vacant Housing in 2010', value: 'vac10', type: 'trts'},
-        {label: 'Percent Vacant Housing in 2010', value: 'pvac10', type: 'trts'},
-        {label: 'Total Occupied Housing in 2010', value: 'ohu10', type: 'trts'},
-        {label: 'Percent Occupied Housing in 2010', value: 'pohu10', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 2010', value: 'own10', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 2010', value: 'pown10', type: 'trts'},
-        {label: 'Total Rental Housing in 2010', value: 'rent10', type: 'trts'},
-        {label: 'Percent Rental Housing in 2010', value: 'prent10', type: 'trts'},
-        {label: 'Median Home Value in 2012', value: 'mhmval12', type: 'trts'},
-        {label: 'Median Home Value in 2012, Adjusted to 2017 Dollars', value: 'mhmval12a17', type: 'trts'},
-        {label: 'Median Rent in 2012', value: 'mrent12', type: 'trts'},
-        {label: 'Median Rent in 2012, Adjusted to 2017 Dollars', value: 'mrent12a17', type: 'trts'},
-        {label: 'Median Household Income in 2012', value: 'hinc12', type: 'trts'},
-        {label: 'Median Household Income in 2012, Adjusted to 2017 Dollars', value: 'hinc12a17', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2012', value: 'hincw12', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2012, Adjusted to 2017 Dollars', value: 'hincw12a17', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2012', value: 'hincb12', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2012, Adjusted to 2017 Dollars', value: 'hincb12a17', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2012', value: 'hinch12', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2012, Adjusted to 2017 Dollars', value: 'hinch12a17', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2012', value: 'hinca12', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2012, Adjusted to 2017 Dollars', value: 'hinca12a17', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 2007 and 2009, ', value: 'meansp0709', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 2007 and 2009, ', value: 'minsp0709', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 2007 and 2009, ', value: 'maxsp0709', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 2007 and 2009, ', value: 'mediansp0709', type: 'trts'},
-        {label: 'Standard Deviation of Sale Price for Single Family Homes between 2007 and 2009, ', value: 'stddevsp0709', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 2007 and 2009, ', value: 'totsp0709', type: 'trts'},
-        {label: 'Number of Homes Sold between 2007 and 2009, ', value: 'nums0709', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 2007 and 2009, Adjusted to 2017 Dollars', value: 'meansp0709a17', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 2007 and 2009, Adjusted to 2017 Dollars', value: 'minsp0709a17', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 2007 and 2009, Adjusted to 2017 Dollars', value: 'maxsp0709a17', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 2007 and 2009, Adjusted to 2017 Dollars', value: 'mediansp0709a17', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 2007 and 2009, Adjusted to 2017 Dollars', value: 'totsp0709a17', type: 'trts'},
-        {label: 'Price Income Ratio between 2007 and 2012, ', value: 'pir0712', type: 'trts'},
-        {label: 'Age 25 and Older in 2012', value: 'ag25up12', type: 'trts'},
-        {label: 'Number of High School Graduates in 2012', value: 'hs12', type: 'trts'},
-        {label: 'Percent High School Graduates in 2012', value: 'phs12', type: 'trts'},
-        {label: 'Number of College Graduates in 2012', value: 'col12', type: 'trts'},
-        {label: 'Percent College Graduates in 2012', value: 'pcol12', type: 'trts'},
-        {label: 'Civilian Labor Force in 2012', value: 'clf12', type: 'trts'},
-        {label: 'Number of Unemployed in 2012', value: 'unemp12', type: 'trts'},
-        {label: 'Percent Unempolyment in 2012', value: 'punemp12', type: 'trts'},
-        {label: 'Percent Change in College Graduates between 2000 and 2012, ', value: 'pccol0012', type: 'trts'},
-        {label: 'Percent Change in White&apos;s between 2000 and 2010, ', value: 'pcnhwht0010', type: 'trts'},
-        {label: 'Percent Change in Black&apos;s between 2000 and 2010, ', value: 'pcnhblk0010', type: 'trts'},
-        {label: 'Percent Change in Asian&apos;s between 2000 and 2010, ', value: 'pcasian0010', type: 'trts'},
-        {label: 'Percent Change in Hispanic&apos;s between 2000 and 2010, ', value: 'pchisp0010', type: 'trts'},
-        {label: 'Change in Median Home Value between 2000 and 2012, Adjusted to 2017 Dollars', value: 'cmhmval0012a17', type: 'trts'},
-        {label: 'Percent Change in Median Home Value between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pcmhmval0012a17', type: 'trts'},
-        {label: 'Change in Median Rent between 2000 and 2012, Adjusted to 2017 Dollars', value: 'cmrent0012a17', type: 'trts'},
-        {label: 'Percent Change in Median Rent between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pcmrent0012a17', type: 'trts'},
-        {label: 'Change in Household Income between 2000 and 2012, Adjusted to 2017 Dollars', value: 'chinc0012a17', type: 'trts'},
-        {label: 'Change in Household Income for White&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'chincw0012a17', type: 'trts'},
-        {label: 'Change in Household Income for Black&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'chincb0012a17', type: 'trts'},
-        {label: 'Change in Household Income for Asian&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'chinca0012a17', type: 'trts'},
-        {label: 'Change in Household Income for Hispanic&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'chinch0012a17', type: 'trts'},
-        {label: 'Change in Mean Sale Price for Single Family Homes between 2000 and 2009, Adjusted to 2017 Dollars', value: 'cmeansp0009a17', type: 'trts'},
-        {label: 'Change in Median Sale Price for Single Family Homes between 2000 and 2009, Adjusted to 2017 Dollars', value: 'cmediansp0009a17', type: 'trts'},
-        {label: 'Percent Change in Household Income between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pchinc0012a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for White&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pchincw0012a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Black&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pchincb0012a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Asian&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pchinca0012a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Hispanic&apos;s between 2000 and 2012, Adjusted to 2017 Dollars', value: 'pchinch0012a17', type: 'trts'},
-        {label: 'Percent Change in Mean Sale Price for Single Family Homes between 2000 and 2009, Adjusted to 2017 Dollars', value: 'pcmeansp0009a17', type: 'trts'},
-        {label: 'Percent Change in Median Sale Price for Single Family Homes between 2000 and 2009, Adjusted to 2017 Dollars', value: 'pcmediansp0009a17', type: 'trts'},
-        {label: 'Total Population in 2016', value: 'pop16', type: 'trts'},
-        {label: 'Total White Population in 2016', value: 'nhwht16', type: 'trts'},
-        {label: 'Percent White Population in 2016', value: 'pnhwht16', type: 'trts'},
-        {label: 'Total Black Population in 2016', value: 'nhblk16', type: 'trts'},
-        {label: 'Percent Black Population in 2016', value: 'pnhblk16', type: 'trts'},
-        {label: 'Total Native Population in 2016', value: 'ntv16', type: 'trts'},
-        {label: 'Percent Native Population in 2016', value: 'pntv16', type: 'trts'},
-        {label: 'Total Asian Population in 2016', value: 'asian16', type: 'trts'},
-        {label: 'Percent Asian Population in 2016', value: 'pasian16', type: 'trts'},
-        {label: 'Total Hawaiian Population in 2016', value: 'haw16', type: 'trts'},
-        {label: 'Percent Hawaiian Population in 2016', value: 'phaw16', type: 'trts'},
-        {label: 'Total Other Population in 2016', value: 'oth16', type: 'trts'},
-        {label: 'Percent Other Populationn in 2016', value: 'poth16', type: 'trts'},
-        {label: 'Total Two or More Races Population in 2016', value: 'twomr16', type: 'trts'},
-        {label: 'Percent Two or More Races Population in 2016', value: 'ptwomr16', type: 'trts'},
-        {label: 'Total Hispanic Population in 2016', value: 'hisp16', type: 'trts'},
-        {label: 'Percent Hispanic Population in 2016', value: 'phisp16', type: 'trts'},
-        {label: 'Percent Change in White&apos;s between 2000 and 2016, ', value: 'pcnhwht0016', type: 'trts'},
-        {label: 'Percent Change in Black&apos;s between 2000 and 2016, ', value: 'pcnhblk0016', type: 'trts'},
-        {label: 'Percent Change in Asian&apos;s between 2000 and 2016, ', value: 'pcasian0016', type: 'trts'},
-        {label: 'Percent Change in Hispanic&apos;s between 2000 and 2016, ', value: 'pchisp0016', type: 'trts'},
-        {label: 'Percent Change in White&apos;s between 2010 and 2016, ', value: 'pcnhwht1016', type: 'trts'},
-        {label: 'Percent Change in Black&apos;s between 2010 and 2016, ', value: 'pcnhblk1016', type: 'trts'},
-        {label: 'Percent Change in Asian&apos;s between 2010 and 2016, ', value: 'pcasian1016', type: 'trts'},
-        {label: 'Percent Change in Hispanic&apos;s between 2010 and 2016, ', value: 'pchisp1016', type: 'trts'},
-        {label: 'Total Housing Units in 2016', value: 'hu16', type: 'trts'},
-        {label: 'Total Occupied Housing in 2016', value: 'ohu16', type: 'trts'},
-        {label: 'Percent Occupied Housing in 2016', value: 'pohu16', type: 'trts'},
-        {label: 'Total Vacant Housing in 2016', value: 'vac16', type: 'trts'},
-        {label: 'Percent Vacant Housing in 2016', value: 'pvac16', type: 'trts'},
-        {label: 'Total Owner Occupied Housing in 2016', value: 'own16', type: 'trts'},
-        {label: 'Percent Owner Occupied Housing in 2016', value: 'pown16', type: 'trts'},
-        {label: 'Total Rental Housing in 2016', value: 'rent16', type: 'trts'},
-        {label: 'Percent Rental Housing in 2016', value: 'prent16', type: 'trts'},
-        {label: 'Median Home Value in 2016', value: 'mhmval16', type: 'trts'},
-        {label: 'Median Rent in 2016', value: 'mrent16', type: 'trts'},
-        {label: 'Median Home Value in 2016, Adjusted to 2017 Dollars', value: 'mhmval16a17', type: 'trts'},
-        {label: 'Median Rent in 2016, Adjusted to 2017 Dollars', value: 'mrent16a17', type: 'trts'},
-        {label: 'Change in Median Home Value between 2000 and 2016, Adjusted to 2017 Dollars', value: 'cmhmval0016a17', type: 'trts'},
-        {label: 'Percent Change in Median Home Value between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pcmhmval0016a17', type: 'trts'},
-        {label: 'Change in Median Rent between 2000 and 2016, Adjusted to 2017 Dollars', value: 'cmrent0016a17', type: 'trts'},
-        {label: 'Percent Change in Median Rent between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pcmrent0016a17', type: 'trts'},
-        {label: 'Change in Median Home Value between 2012 and 2016, Adjusted to 2017 Dollars', value: 'cmhmval1216a17', type: 'trts'},
-        {label: 'Percent Change in Median Home Value between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pcmhmval1216a17', type: 'trts'},
-        {label: 'Change in Median Rent between 2012 and 2016, Adjusted to 2017 Dollars', value: 'cmrent1216a17', type: 'trts'},
-        {label: 'Percent Change in Median Rent between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pcmrent1216a17', type: 'trts'},
-        {label: 'Median Household Income in 2016', value: 'hinc16', type: 'trts'},
-        {label: 'Median Household Income in 2016, Adjusted to 2017 Dollars', value: 'hinc16a17', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2016', value: 'hincw16', type: 'trts'},
-        {label: 'Median Household Income for Whites in 2016, Adjusted to 2017 Dollars', value: 'hincw16a17', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2016', value: 'hincb16', type: 'trts'},
-        {label: 'Median Household Income for Blacks in 2016, Adjusted to 2017 Dollars', value: 'hincb16a17', type: 'trts'},
-        {label: 'Median Household Income for Natives in 2016', value: 'hincn16', type: 'trts'},
-        {label: 'Median Household Income for Natives in 2016, Adjusted to 2017 Dollars', value: 'hincn16a17', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2016', value: 'hinca16', type: 'trts'},
-        {label: 'Median Household Income for Asians in 2016, Adjusted to 2017 Dollars', value: 'hinca16a17', type: 'trts'},
-        {label: 'Median Household Income for Hawaiians in 2016', value: 'hincp16', type: 'trts'},
-        {label: 'Median Household Income for Hawaiians in 2016, Adjusted to 2017 Dollars', value: 'hincp16a17', type: 'trts'},
-        {label: 'Median Household Income for Other in 2016', value: 'hinco16', type: 'trts'},
-        {label: 'Median Household Income for Other in 2016, Adjusted to 2017 Dollars', value: 'hinco16a17', type: 'trts'},
-        {label: 'Median Household Income for Two or More Races in 2016', value: 'hincm16', type: 'trts'},
-        {label: 'Median Household Income for Two or More Races in 2016, Adjusted to 2017 Dollars', value: 'hincm16a17', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2016', value: 'hinch16', type: 'trts'},
-        {label: 'Median Household Income for Hispanics in 2016, Adjusted to 2017 Dollars', value: 'hinch16a17', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 2015 and 2017', value: 'meansp1517', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 2015 and 2017', value: 'minsp1517', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 2015 and 2017', value: 'maxsp1517', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 2015 and 2017', value: 'mediansp1517', type: 'trts'},
-        {label: 'Standard Deviation of Sale Price for Single Family Homes between 2015 and 2017', value: 'stddevsp1517', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 2015 and 2017', value: 'totsp1517', type: 'trts'},
-        {label: 'Number of Homes Sold between 2015 and 2017', value: 'nums1517', type: 'trts'},
-        {label: 'Mean Sale Price of Single Family Homes between 2015 and 2017, Adjusted to 2017 Dollars', value: 'meansp1517a17', type: 'trts'},
-        {label: 'Minimum Sale Price of Single Family Homes between 2015 and 2017, Adjusted to 2017 Dollars', value: 'minsp1517a17', type: 'trts'},
-        {label: 'Maximum Sale Price of Single Family Homes between 2015 and 2017, Adjusted to 2017 Dollars', value: 'maxsp1517a17', type: 'trts'},
-        {label: 'Median Sale Price of Single Family Homes between 2015 and 2017, Adjusted to 2017 Dollars', value: 'mediansp1517a17', type: 'trts'},
-        {label: 'Total Sale Price of Single Family Homes between 2015 and 2017, Adjusted to 2017 Dollars', value: 'totsp1517a17', type: 'trts'},
-        {label: 'Price Income Ratio between 2015 and 2017', value: 'pir1517', type: 'trts'},
-        {label: 'Change in Household Income between 2012 and 2016, Adjusted to 2017 Dollars', value: 'chinc1216a17', type: 'trts'},
-        {label: 'Change in Household Income for White&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'chincw1216a17', type: 'trts'},
-        {label: 'Change in Household Income for Black&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'chincb1216a17', type: 'trts'},
-        {label: 'Change in Household Income for Asian&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'chinca1216a17', type: 'trts'},
-        {label: 'Change in Household Income for Hispanic&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'chinch1216a17', type: 'trts'},
-        {label: 'Change in Mean Sale Price for Single Family Homes between 2009 and 2017, Adjusted to 2017 Dollars', value: 'cmeansp0917a17', type: 'trts'},
-        {label: 'Change in Median Sale Price for Single Family Homes between 2009 and 2017, Adjusted to 2017 Dollars', value: 'cmediansp0917a17', type: 'trts'},
-        {label: 'Percent Change in Household Income between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pchinc1216a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for White&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pchincw1216a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Black&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pchincb1216a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Asian&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pchinca1216a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Hispanic&apos;s between 2012 and 2016, Adjusted to 2017 Dollars', value: 'pchinch1216a17', type: 'trts'},
-        {label: 'Percent Change in Mean Sale Price for Single Family Homes between 2009 and 2017, Adjusted to 2017 Dollars', value: 'pcmeansp0917a17', type: 'trts'},
-        {label: 'Percent Change in Median Sale Price for Single Family Homes between 2009 and 2017, Adjusted to 2017 Dollars', value: 'pcmediansp0917a17', type: 'trts'},
-        {label: 'Change in Household Income between 2000 and 2016, Adjusted to 2017 Dollars', value: 'chinc0016a17', type: 'trts'},
-        {label: 'Change in Household Income for White&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'chincw0016a17', type: 'trts'},
-        {label: 'Change in Household Income for Black&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'chincb0016a17', type: 'trts'},
-        {label: 'Change in Household Income for Asian&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'chinca0016a17', type: 'trts'},
-        {label: 'Change in Household Income for Hispanic&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'chinch0016a17', type: 'trts'},
-        {label: 'Change in Mean Sale Price for Single Family Homes between 2000 and 2017, Adjusted to 2017 Dollars', value: 'cmeansp0017a17', type: 'trts'},
-        {label: 'Change in Median Sale Price for Single Family Homes between 2000 and 2017, Adjusted to 2017 Dollars', value: 'cmediansp0017a17', type: 'trts'},
-        {label: 'Percent Change in Household Income between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pchinc0016a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for White&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pchincw0016a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Black&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pchincb0016a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Asian&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pchinca0016a17', type: 'trts'},
-        {label: 'Percent Change in Household Income for Hispanic&apos;s between 2000 and 2016, Adjusted to 2017 Dollars', value: 'pchinch0016a17', type: 'trts'},
-        {label: 'Percent Change in Mean Sale Price for Single Family Homes between 2000 and 2017, Adjusted to 2017 Dollars', value: 'pcmeansp0017a17', type: 'trts'},
-        {label: 'Percent Change in Median Sale Price for Single Family Homes between 2000 and 2017, Adjusted to 2017 Dollars', value: 'pcmediansp0017a17', type: 'trts'},
-        {label: 'Age 25 and Older in 2016', value: 'ag25up16', type: 'trts'},
-        {label: 'Number of Male College Graduates in 2016', value: 'colm16', type: 'trts'},
-        {label: 'Number of Female College Graduates in 2016', value: 'colf16', type: 'trts'},
-        {label: 'Number of College Graduates in 2016', value: 'col16', type: 'trts'},
-        {label: 'Percent College Graduates in 2016', value: 'pcol16', type: 'trts'},
-        {label: 'Percent Change in College Graduates between 2012 and 2016, ', value: 'pccol1216', type: 'trts'},
-        {label: 'Percent Change in College Graduates between 2000 and 2016, ', value: 'pccol0016', type: 'trts'}
-
+function () {
+   var desc
       if (this.select.value === 'pop70' && this.select.type === 'trts') {
         desc = 'Total Population: ' + numberWithCommas(this.currentDurhamtr.pop70)
       }
@@ -1074,16 +706,16 @@
         desc = 'Percent Change in College Graduates: ' + numberWithCommas(this.currentDurhamtr.pccol0012)
       }
       else if (this.select.value === 'pcnhwht0010' && this.select.type === 'trts') {
-        desc = 'Percent Change in White&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhwht0010)
+        desc = 'Percent Change in White Population: ' + numberWithCommas(this.currentDurhamtr.pcnhwht0010)
       }
       else if (this.select.value === 'pcnhblk0010' && this.select.type === 'trts') {
-        desc = 'Percent Change in Black&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhblk0010)
+        desc = 'Percent Change in Black Population: ' + numberWithCommas(this.currentDurhamtr.pcnhblk0010)
       }
       else if (this.select.value === 'pcasian0010' && this.select.type === 'trts') {
-        desc = 'Percent Change in Asian&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcasian0010)
+        desc = 'Percent Change in Asian Population: ' + numberWithCommas(this.currentDurhamtr.pcasian0010)
       }
       else if (this.select.value === 'pchisp0010' && this.select.type === 'trts') {
-        desc = 'Percent Change in Hispanic&apos;s: ' + numberWithCommas(this.currentDurhamtr.pchisp0010)
+        desc = 'Percent Change in Hispanic Population: ' + numberWithCommas(this.currentDurhamtr.pchisp0010)
       }
       else if (this.select.value === 'cmhmval0012a17' && this.select.type === 'trts') {
         desc = 'Change in Median Home Value, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.cmhmval0012a17)
@@ -1101,16 +733,16 @@
         desc = 'Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinc0012a17)
       }
       else if (this.select.value === 'chincw0012a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw0012a17)
+        desc = 'Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw0012a17)
       }
       else if (this.select.value === 'chincb0012a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb0012a17)
+        desc = 'Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb0012a17)
       }
       else if (this.select.value === 'chinca0012a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca0012a17)
+        desc = 'Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca0012a17)
       }
       else if (this.select.value === 'chinch0012a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch0012a17)
+        desc = 'Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch0012a17)
       }
       else if (this.select.value === 'cmeansp0009a17' && this.select.type === 'trts') {
         desc = 'Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.cmeansp0009a17)
@@ -1122,16 +754,16 @@
         desc = 'Percent Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinc0012a17)
       }
       else if (this.select.value === 'pchincw0012a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw0012a17)
+        desc = 'Percent Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw0012a17)
       }
       else if (this.select.value === 'pchincb0012a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb0012a17)
+        desc = 'Percent Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb0012a17)
       }
       else if (this.select.value === 'pchinca0012a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca0012a17)
+        desc = 'Percent Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca0012a17)
       }
       else if (this.select.value === 'pchinch0012a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch0012a17)
+        desc = 'Percent Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch0012a17)
       }
       else if (this.select.value === 'pcmeansp0009a17' && this.select.type === 'trts') {
         desc = 'Percent Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pcmeansp0009a17)
@@ -1176,7 +808,7 @@
         desc = 'Total Other Population: ' + numberWithCommas(this.currentDurhamtr.oth16)
       }
       else if (this.select.value === 'poth16' && this.select.type === 'trts') {
-        desc = 'Percent Other Populationn: ' + numberWithCommas(this.currentDurhamtr.poth16)
+        desc = 'Percent Other Population: ' + numberWithCommas(this.currentDurhamtr.poth16)
       }
       else if (this.select.value === 'twomr16' && this.select.type === 'trts') {
         desc = 'Total Two or More Races Population: ' + numberWithCommas(this.currentDurhamtr.twomr16)
@@ -1191,28 +823,28 @@
         desc = 'Percent Hispanic Population: ' + numberWithCommas(this.currentDurhamtr.phisp16)
       }
       else if (this.select.value === 'pcnhwht0016' && this.select.type === 'trts') {
-        desc = 'Percent Change in White&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhwht0016)
+        desc = 'Percent Change in White Population: ' + numberWithCommas(this.currentDurhamtr.pcnhwht0016)
       }
       else if (this.select.value === 'pcnhblk0016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Black&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhblk0016)
+        desc = 'Percent Change in Black Population: ' + numberWithCommas(this.currentDurhamtr.pcnhblk0016)
       }
       else if (this.select.value === 'pcasian0016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Asian&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcasian0016)
+        desc = 'Percent Change in Asian Population: ' + numberWithCommas(this.currentDurhamtr.pcasian0016)
       }
       else if (this.select.value === 'pchisp0016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Hispanic&apos;s: ' + numberWithCommas(this.currentDurhamtr.pchisp0016)
+        desc = 'Percent Change in Hispanic Population: ' + numberWithCommas(this.currentDurhamtr.pchisp0016)
       }
       else if (this.select.value === 'pcnhwht1016' && this.select.type === 'trts') {
-        desc = 'Percent Change in White&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhwht1016)
+        desc = 'Percent Change in White Population: ' + numberWithCommas(this.currentDurhamtr.pcnhwht1016)
       }
       else if (this.select.value === 'pcnhblk1016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Black&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcnhblk1016)
+        desc = 'Percent Change in Black Population: ' + numberWithCommas(this.currentDurhamtr.pcnhblk1016)
       }
       else if (this.select.value === 'pcasian1016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Asian&apos;s: ' + numberWithCommas(this.currentDurhamtr.pcasian1016)
+        desc = 'Percent Change in Asian Population: ' + numberWithCommas(this.currentDurhamtr.pcasian1016)
       }
       else if (this.select.value === 'pchisp1016' && this.select.type === 'trts') {
-        desc = 'Percent Change in Hispanic&apos;s: ' + numberWithCommas(this.currentDurhamtr.pchisp1016)
+        desc = 'Percent Change in Hispanic Population: ' + numberWithCommas(this.currentDurhamtr.pchisp1016)
       }
       else if (this.select.value === 'hu16' && this.select.type === 'trts') {
         desc = 'Total Housing Units: ' + numberWithCommas(this.currentDurhamtr.hu16)
@@ -1374,16 +1006,16 @@
         desc = 'Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinc1216a17)
       }
       else if (this.select.value === 'chincw1216a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw1216a17)
+        desc = 'Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw1216a17)
       }
       else if (this.select.value === 'chincb1216a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb1216a17)
+        desc = 'Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb1216a17)
       }
       else if (this.select.value === 'chinca1216a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca1216a17)
+        desc = 'Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca1216a17)
       }
       else if (this.select.value === 'chinch1216a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch1216a17)
+        desc = 'Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch1216a17)
       }
       else if (this.select.value === 'cmeansp0917a17' && this.select.type === 'trts') {
         desc = 'Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.cmeansp0917a17)
@@ -1395,16 +1027,16 @@
         desc = 'Percent Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinc1216a17)
       }
       else if (this.select.value === 'pchincw1216a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw1216a17)
+        desc = 'Percent Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw1216a17)
       }
       else if (this.select.value === 'pchincb1216a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb1216a17)
+        desc = 'Percent Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb1216a17)
       }
       else if (this.select.value === 'pchinca1216a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca1216a17)
+        desc = 'Percent Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca1216a17)
       }
       else if (this.select.value === 'pchinch1216a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch1216a17)
+        desc = 'Percent Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch1216a17)
       }
       else if (this.select.value === 'pcmeansp0917a17' && this.select.type === 'trts') {
         desc = 'Percent Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pcmeansp0917a17)
@@ -1416,16 +1048,16 @@
         desc = 'Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinc0016a17)
       }
       else if (this.select.value === 'chincw0016a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw0016a17)
+        desc = 'Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincw0016a17)
       }
       else if (this.select.value === 'chincb0016a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb0016a17)
+        desc = 'Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chincb0016a17)
       }
       else if (this.select.value === 'chinca0016a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca0016a17)
+        desc = 'Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinca0016a17)
       }
       else if (this.select.value === 'chinch0016a17' && this.select.type === 'trts') {
-        desc = 'Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch0016a17)
+        desc = 'Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.chinch0016a17)
       }
       else if (this.select.value === 'cmeansp0017a17' && this.select.type === 'trts') {
         desc = 'Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.cmeansp0017a17)
@@ -1437,16 +1069,16 @@
         desc = 'Percent Change in Household Income, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinc0016a17)
       }
       else if (this.select.value === 'pchincw0016a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for White&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw0016a17)
+        desc = 'Percent Change in Household Income for White Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincw0016a17)
       }
       else if (this.select.value === 'pchincb0016a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Black&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb0016a17)
+        desc = 'Percent Change in Household Income for Black Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchincb0016a17)
       }
       else if (this.select.value === 'pchinca0016a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Asian&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca0016a17)
+        desc = 'Percent Change in Household Income for Asian Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinca0016a17)
       }
       else if (this.select.value === 'pchinch0016a17' && this.select.type === 'trts') {
-        desc = 'Percent Change in Household Income for Hispanic&apos;s, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch0016a17)
+        desc = 'Percent Change in Household Income for Hispanic Population, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pchinch0016a17)
       }
       else if (this.select.value === 'pcmeansp0017a17' && this.select.type === 'trts') {
         desc = 'Percent Change in Mean Sale Price for Single Family Homes, Adjusted to 2017 Dollars: ' + numberWithCommas(this.currentDurhamtr.pcmeansp0017a17)
@@ -1475,3 +1107,5 @@
       else if (this.select.value === 'pccol0016' && this.select.type === 'trts') {
         desc = 'Percent Change in College Graduates: ' + numberWithCommas(this.currentDurhamtr.pccol0016)
       }
+   return desc
+}
