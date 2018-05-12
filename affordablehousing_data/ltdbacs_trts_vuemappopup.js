@@ -1,5 +1,5 @@
 function () {
-   var desc
+     var desc
       if (this.select.value === 'pop70' && this.select.type === 'trts') {
         desc = 'Total Population: ' + numberWithCommas(this.currentDurhamtr.pop70)
       }
@@ -1107,5 +1107,5 @@ function () {
       else if (this.select.value === 'pccol0016' && this.select.type === 'trts') {
         desc = 'Percent Change in College Graduates: ' + numberWithCommas(this.currentDurhamtr.pccol0016)
       }
-   return desc
-}
+     return desc
+  }
