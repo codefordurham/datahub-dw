@@ -1,0 +1,15 @@
+group|desc
+democount|Durhams Demographic Numbers
+demopercent|Durhams Demogrphic Percentages
+pcdemo|Percent Change in Durhams Demographics
+realcount|Durhams Housing Numbers
+realpercent|Durhams Housing Percentages
+realvalue|Durhams Housing Values
+crealvalue|Change in Durhams Housing Values
+pcrealvalue|Percent Change in Durhams Housing Values
+income|Incomes in Durham
+cincome|Change in Durhams Incomes
+pcincome|Percent Change in Durhams Incomes
+pir|Durhams Price Income Ratio
+education|Education in Durham
+employment|Employment in Durham
