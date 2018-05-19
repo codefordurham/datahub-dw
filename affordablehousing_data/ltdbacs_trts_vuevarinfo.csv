@@ -1,32 +1,52 @@
 var|desc|unit|group
 pop|Total Population|#|democount
 nhwht|Total White Population|#|democount
-pnhwht|Percent White Population|%|demopercent
 nhblk|Total Black Population|#|democount
-pnhblk|Percent Black Population|%|demopercent
 ntv|Total Native Population|#|democount
-pntv|Percent Native Population|%|demopercent
 asian|Total Asian Population|#|democount
-pasian|Percent Asian Population|%|demopercent
 haw|Total Hawaiian Population|#|democount
-phaw|Percent Hawaiian Population|%|demopercent
 oth|Total Other Population|#|democount
-poth|Percent Other Population|%|demopercent
 twomr|Total Two or More Races Population|#|democount 
-ptwomr|Percent Two or More Races Population|%|demopercent
 hisp|Total Hispanic Population|#|democount
+ag25up|Age 25 and Older|#|democount
+pnhwht|Percent White Population|%|demopercent
+pnhblk|Percent Black Population|%|demopercent
+pasian|Percent Asian Population|%|demopercent
 phisp|Percent Hispanic Population|%|demopercent
+pntv|Percent Native Population|%|demopercent
+phaw|Percent Hawaiian Population|%|demopercent
+poth|Percent Other Population|%|demopercent
+ptwomr|Percent Two or More Races Population|%|demopercent
+pcnhwht|Percent Change in White Population|%|pcdemo
+pcnhblk|Percent Change in Black Population|%|pcdemo
+pcasian|Percent Change in Asian Population|%|pcdemo
+pchisp|Percent Change in Hispanic Population|%|pcdemo
 hu|Total Housing Units|#|realcount
 ohu|Total Occupied Housing|#|realcount
-pohu|Percent Occupied Housing|%|realpercent
 vac|Total Vacant Housing|# |realcount
-pvac|Percent Vacant Housing|%|realpercent
 own|Total Owner Occupied Housing|#|realcount
-pown|Percent Owner Occupied Housing|%|realpercent
 rent|Total Rental Housing|#|realcount
+pohu|Percent Occupied Housing|%|realpercent
+pvac|Percent Vacant Housing|%|realpercent
+pown|Percent Owner Occupied Housing|%|realpercent
 prent|Percent Rental Housing|%|realpercent
 mhmval|Median Home Value|$|realvalue
 mrent|Median Rent|$|realvalue
+meansp|Mean Sale Price of Single Family Homes|$|realvalue
+minsp|Minimum Sale Price of Single Family Homes|$|realvalue
+maxsp|Maximum Sale Price of Single Family Homes|$|realvalue
+mediansp|Median Sale Price of Single Family Homes|$|realvalue
+stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realvalue
+totsp|Total Sale Price of Single Family Homes|$|realvalue
+nums|Number of Homes Sold|#|realvalue
+cmhmval|Change in Median Home Value|$|crealvalue
+cmrent|Change in Median Rent|$|crealvalue
+cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealvalue
+cmediansp|Change in Median Sale Price for Single Family Homes|$|crealvalue
+pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
+pcmrent|Percent Change in Median Rent|%|pcrealvalue
+pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pccrealvalue
+pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pccrealvalue
 hinc|Median Household Income|$|income
 hincw|Median Household Income for Whites|$|income
 hincb|Median Household Income for Blacks|$|income
@@ -36,36 +56,6 @@ hincp|Median Household Income for Hawaiians|$|income
 hinco|Median Household Income for Other|$|income
 hincm|Median Household Income for Two or More Races|$|income
 hinch|Median Household Income for Hispanics|$|income
-meansp|Mean Sale Price of Single Family Homes|$|realvalue
-minsp|Minimum Sale Price of Single Family Homes|$|realvalue
-maxsp|Maximum Sale Price of Single Family Homes|$|realvalue
-mediansp|Median Sale Price of Single Family Homes|$|realvalue
-stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realvalue
-totsp|Total Sale Price of Single Family Homes|$|realvalue
-nums|Number of Homes Sold|#|realvalue
-pir|Price Income Ratio|\u0020|pir
-cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealvalue
-cmediansp|Change in Median Sale Price for Single Family Homes|$|crealvalue
-pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pccrealvalue
-pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pccrealvalue
-ag25up|Age 25 and Older|#|democount
-hs|Number of High School Graduates|#|education
-phs|Percent High School Graduates|%|education
-col|Number of College Graduates|#|education
-colm|Number of Male College Graduates|#|education
-colf|Number of Female College Graduates|#|education
-pcol|Percent College Graduates|%|education
-clf|Civilian Labor Force|#|employment
-unemp|Number of Unemployed|#|employment
-punemp|Percent Unempolyment|%|employment
-pcnhwht|Percent Change in White Population|%|pcdemo
-pcnhblk|Percent Change in Black Population|%|pcdemo
-pcasian|Percent Change in Asian Population|%|pcdemo
-pchisp|Percent Change in Hispanic Population|%|pcdemo
-cmhmval|Change in Median Home Value|$|crealvalue
-cmrent|Change in Median Rent|$|crealvalue
-pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
-pcmrent|Percent Change in Median Rent|%|pcrealvalue
 chinc|Change in Household Income|$|cincome
 chincw|Change in Household Income for White Population|$|cincome
 chincb|Change in Household Income for Black Population|$|cincome
@@ -76,4 +66,20 @@ pchincw|Percent Change in Household Income for White Population|%|pcincome
 pchincb|Percent Change in Household Income for Black Population|%|pcincome
 pchinca|Percent Change in Household Income for Asian Population|%|pcincome
 pchinch|Percent Change in Household Income for Hispanic Population|%|pcincome
+pir|Price Income Ratio|\u0020|pir
+hs|Number of High School Graduates|#|education
+phs|Percent High School Graduates|%|education
+col|Number of College Graduates|#|education
+batm|Number of Males with Bachelor Degrees|#|education
+batf|Number of Females with Bachelor Degrees|#|education
+masm|Number of Males with Mater Degrees|#|education
+masf|Number of Females with Master Degrees|#|education
+prom|Number of Males with Professional Degrees|#|education
+prof|Number of Females with Professional Degrees|#|education
+phdm|Number of Males with a PhD|#|education
+phdf|Number of Females with a PhD|#|education
+pcol|Percent College Graduates|%|education
 pccol|Percent Change in College Graduates|%|education
+clf|Civilian Labor Force|#|employment
+unemp|Number of Unemployed|#|employment
+punemp|Percent Unempolyment|%|employment
