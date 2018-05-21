@@ -32,21 +32,21 @@ pown|Percent Owner Occupied Housing|%|realpercent
 prent|Percent Rental Housing|%|realpercent
 mhmval|Median Home Value|$|realvalue
 mrent|Median Rent|$|realvalue
-meansp|Mean Sale Price of Single Family Homes|$|realvalue
-minsp|Minimum Sale Price of Single Family Homes|$|realvalue
-maxsp|Maximum Sale Price of Single Family Homes|$|realvalue
-mediansp|Median Sale Price of Single Family Homes|$|realvalue
-stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realvalue
-totsp|Total Sale Price of Single Family Homes|$|realvalue
-nums|Number of Homes Sold|#|realvalue
+meansp|Mean Sale Price of Single Family Homes|$|realsale
+minsp|Minimum Sale Price of Single Family Homes|$|realsale
+maxsp|Maximum Sale Price of Single Family Homes|$|realsale
+mediansp|Median Sale Price of Single Family Homes|$|realsale
+stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realsale
+totsp|Total Sale Price of Single Family Homes|$|realsale
+nums|Number of Homes Sold|#|realsale
 cmhmval|Change in Median Home Value|$|crealvalue
 cmrent|Change in Median Rent|$|crealvalue
-cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealvalue
-cmediansp|Change in Median Sale Price for Single Family Homes|$|crealvalue
+cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealsale
+cmediansp|Change in Median Sale Price for Single Family Homes|$|crealsale
 pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
 pcmrent|Percent Change in Median Rent|%|pcrealvalue
-pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pccrealvalue
-pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pccrealvalue
+pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pcrealsale
+pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pcrealsale
 hinc|Median Household Income|$|income
 hincw|Median Household Income for Whites|$|income
 hincb|Median Household Income for Blacks|$|income

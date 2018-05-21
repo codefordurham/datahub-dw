@@ -7,6 +7,9 @@ realpercent|Durhams Housing Percentages
 realvalue|Durhams Housing Values
 crealvalue|Change in Durhams Housing Values
 pcrealvalue|Percent Change in Durhams Housing Values
+realsale|Durhams Housing Sales
+crealsale|Change in Durhams Housing Sales
+pcrealsale|Percent Change in Durhams Housing Sales
 income|Incomes in Durham
 cincome|Change in Durhams Incomes
 pcincome|Percent Change in Durhams Incomes
