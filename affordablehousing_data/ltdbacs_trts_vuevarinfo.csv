@@ -47,6 +47,12 @@ pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
 pcmrent|Percent Change in Median Rent|%|pcrealvalue
 pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pcrealsale
 pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pcrealsale
+grprchi|Gross Rent as Percent of Household Income|%|realcost
+pcgrprchi|Percent Change Gross Rent as Percent of Household Income|%|realcost
+mmocphi|Morgage Monthly Owners Cost as a Percent of Household Income|%|realcost
+mmocphiym|Morgage Monthly Owners Cost as a Percent of Household Income with Morgage|%|realcost
+mmocphinm|Morgage Monthly Owners Cost as a Percent of Household Income without Morgage|%|realcost
+pcmmocphiym|Percent Change in Morgage Monthly Owners Cost as a Percent of Household Income with Morgage|%|realcost
 hinc|Median Household Income|$|income
 hincw|Median Household Income for Whites|$|income
 hincb|Median Household Income for Blacks|$|income
