@@ -89,12 +89,12 @@ def extractpropsales(begin_year):
         if conn is not None:
             conn.close()
 
-f = open('propsalesacs_1517_bgs.csv','w')
+f = open('propsaleparcelsacs_1517_bgs.csv','w')
 f.write(pd.concat([extractpropsales('2015')], axis=1).to_csv(index_label='id'))
 f.close()
-f = open('propsalesdec_9800_bgs.csv','w')
+f = open('propsaleparcelsdec_9800_bgs.csv','w')
 f.write(pd.concat([extractpropsales('1998')], axis=1).to_csv(index_label='id'))
 f.close()
-f = open('propsalescompass_1314_bgs.csv','w')
+f = open('propsaleparcelscompass_1314_bgs.csv','w')
 f.write(pd.concat([extractpropsales('2013')], axis=1).to_csv(index_label='id'))
 f.close()
