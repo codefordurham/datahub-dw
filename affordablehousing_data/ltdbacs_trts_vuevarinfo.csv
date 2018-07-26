@@ -1,5 +1,6 @@
 var|desc|unit|group
 pop|Total Population|#|democount
+cpop|Change in Population|#|democount
 nhwht|Total White Population|#|democount
 nhblk|Total Black Population|#|democount
 ntv|Total Native Population|#|democount
@@ -17,6 +18,7 @@ pntv|Percent Native Population|%|demopercent
 phaw|Percent Hawaiian Population|%|demopercent
 poth|Percent Other Population|%|demopercent
 ptwomr|Percent Two or More Races Population|%|demopercent
+pcpop|Percent Change in Population|%|pcdemo
 pcnhwht|Percent Change in White Population|%|pcdemo
 pcnhblk|Percent Change in Black Population|%|pcdemo
 pcasian|Percent Change in Asian Population|%|pcdemo

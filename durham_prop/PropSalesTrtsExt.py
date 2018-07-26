@@ -1,4 +1,4 @@
-import psycopg2,sys,pdb
+import psycopg2,sys
 from psycopg2.extensions import AsIs
 import pandas as pd
 import numpy as np
