@@ -119,5 +119,5 @@ def propsaleparcels(begindate,enddate,datadate,featuretype):
             conn.close()
 
 # Runs the programs.
-propsaleparcels("19980101","20001231","2001","bgs10")
+propsaleparcels("19980101","20001231","2001","bgs00")
 #propsaleparcels("19980101","20001231","2001","bgs")

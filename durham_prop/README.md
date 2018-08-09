@@ -88,3 +88,14 @@ Now use the file PropSalesCompassExt.py to extract the data into a csv file. The
 Django Rest Framework. To learn more about the datahub-be project go to the following GitHub repository:
 
 https://github.com/codefordurham/datahub-be
+
+SALE HISTORY
+The Durham property parcel data only has most recent sales. Below are routines to extract sale history from the
+Durham Tax Record web site.
+
+* PropSaleParcelsPG.py Extracts for a date range, from the Durham property parcel data archived above, using
+US Census Block Groups from 2010. This data is then used in PropSalesParcelsWeb.py.
+* PropSaleParcelsPG00.py Extracts for a date range, from the Durham property parcel data archived above, with 
+option of using US Census Block Groups from 2000
+* PropSalesParcelsWeb.py Extracts sale history from the Durham Tax Records site, using latest sales from the
+Durham Property Parcel data.
