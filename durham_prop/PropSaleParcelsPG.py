@@ -113,7 +113,7 @@ def propsaleparcels(begindate,enddate,datadate,featuretype):
             conn.close()
 
 # Runs the programs.
-#propsaleparcels("20150101","20171231","011818","bgs")
+propsaleparcels("20150101","20171231","011818","bgs")
 #propsaleparcels("20130101","20141231","100517","bgs")
 #propsaleparcels("20080101","20091231","2010","bgs")
 
