@@ -1,4 +1,4 @@
-Data used on by the datahub-be site
+Data used on by the datahub-be site, focussed on demographic data from the US Census, and data derived from Durham property parcel data.
 ---
 * datahub_ingest.bin - Run this file to ingest data into the datahub-be database. It 
 contains three psql command that ingest the csv files listed below, using the sql files
