@@ -1,3 +1,1 @@
-durham_bldgpermits.csv filter=lfs diff=lfs merge=lfs -text
-ParcelPermits.csv filter=lfs diff=lfs merge=lfs -text
-parcels.csv filter=lfs diff=lfs merge=lfs -text
+
