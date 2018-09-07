@@ -27,13 +27,14 @@ hu|Total Housing Units|#|realcount
 ohu|Total Occupied Housing|#|realcount
 vac|Total Vacant Housing|# |realcount
 own|Total Owner Occupied Housing|#|realcount
-rent|Total Rental Housing|#|realcount
+rentoc|Total Occupied Rental Housing|#|realcount
 pohu|Percent Occupied Housing|%|realpercent
 pvac|Percent Vacant Housing|%|realpercent
 pown|Percent Owner Occupied Housing|%|realpercent
-prent|Percent Rental Housing|%|realpercent
+prent|Percent Occupied Rental Housing|%|realpercent
 mhmval|Median Home Value|$|realvalue
-mrent|Median Rent|$|realvalue
+mrent|Median Contract Rent|$|realvalue
+mgrent|Median Gross Rent|$|realvalue
 meansp|Mean Sale Price of Single Family Homes|$|realsale
 minsp|Minimum Sale Price of Single Family Homes|$|realsale
 maxsp|Maximum Sale Price of Single Family Homes|$|realsale
@@ -42,11 +43,13 @@ stddevsp|Standard Deviation of Sale Price for Single Family Homes|$|realsale
 totsp|Total Sale Price of Single Family Homes|$|realsale
 nums|Number of Homes Sold|#|realsale
 cmhmval|Change in Median Home Value|$|crealvalue
-cmrent|Change in Median Rent|$|crealvalue
+cmrent|Change in Median Contract Rent|$|crealvalue
+cmgrent|Change in Median Gross Rent|$|crealvalue
 cmeansp|Change in Mean Sale Price for Single Family Homes|$|crealsale
 cmediansp|Change in Median Sale Price for Single Family Homes|$|crealsale
 pcmhmval|Percent Change in Median Home Value|%|pcrealvalue
-pcmrent|Percent Change in Median Rent|%|pcrealvalue
+pcmrent|Percent Change in Median Contract Rent|%|pcrealvalue
+pcmgrent|Percent Change in Median Gross Rent|%|pcrealvalue
 pcmeansp|Percent Change in Mean Sale Price for Single Family Homes|%|pcrealsale
 pcmediansp|Percent Change in Median Sale Price for Single Family Homes|%|pcrealsale
 grprchi|Gross Rent as Percent of Household Income|%|realcost
