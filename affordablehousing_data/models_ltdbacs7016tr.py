@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models#from django.db import models
 
 class LTDBACS_trts_7016(models.Model):
    id = models.TextField(12,primary_key=True)
